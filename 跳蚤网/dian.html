@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="data-spm" content="a2107" />
+<title>跳蚤市场 - 淘！我喜欢</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="imagetoolbar" content="no" />
+<link rel="stylesheet" href="dian.css" type="text/css" />
+<script>
+var time = 300;
+        var h = 0;
+        function addCount() {
+            if (time > 0) {
+                time--;
+                h = h + 5;
+            }
+            else {
+                return;
+            }
+            if (h >= 300)  //高度 
+            {
+                return;
+            }
+            else {
+
+                document.getElementById("pn").style.height = h + "px";
+            }
+            setTimeout("addCount()", 30);
+        }
+        window.onload = function showAds() {
+            addCount();
+            setTimeout("noneAds()", 5000); //停留时间自己调了 
+        }
+        var T = 300;
+        var N = 300; //高度 
+        function noneAds() {
+            if (T > 0) {
+                T--;
+                N = N - 5;
+            }
+            else {
+                return;
+            }
+            if (N <= 0) {
+                document.getElementById("pn").style.display = "none";
+                //document.getElementById("pn").style.height = "30px";
+                return;
+            }
+            else {
+                document.getElementById("pn").style.height = N + "px";
+            }
+            setTimeout("noneAds()", 30);
+        } 
+</script>
+</head>
+<body>
+  <div class="top"><span><a href="#">亲，请登录</a></span><span><a href="tiaosao.html">免费注册</a></span><span><a href="#">手机登录</a></span>
+  <ul><li>分类导航</li><li>商品分类</li><li>联系客服</li><li>我的收藏</li><li>购物车</li><li>我的账单</li><li>首页</li></ul>
+  </div>
+  <div class="search">
+     <img src="images/logo.png">
+     
+     <form>
+       <input type="text" class="search-text" name="q"/>
+       <input type="submit" class="search-button" value=""/>
+     </form>
+     <div class="lo">
+     <img src="images/logo1.png">
+     </div>
+     <div class="fo">
+     <ul><li>超值好货</li><li>9.9疯抢</li><li>超划算</li><li>买手专辑</li><li>穿衣搭配</li><li>今日头条</li><li>新品推荐</li><li>跳蚤市场</li></ul>
+     </div>
+  </div>
+  <div class="left">
+  </div>
+  <div class="right">
+  </div>
+  <div class="mid">
+        <div id="pn">
+            <h1>
+                欢迎来到跳蚤网</h1>
+        </div>
+        <p class="slide">
+
+            <div href="javascript:showdiv();" id="strHref" class="btn-slide">s<span><a href="#">服装</a></span><span><a href="tiaosao.html">鞋子</a></span><span><a href="#">各式包</a></span><span><a href="#">首饰</a></span><span><a href="tiaosao.html">发饰</a></span><span><a href="#">香水</a></span><span><a href="#">护肤品</a></span><span><a href="#">手机</a></span><span><a href="#">化妆品</a></span><span><a href="#">新款外套</a></span></div>
+        </p>
+        <div class="main">
+          
+        </div>
+  </div>
+  
+</body>
+</html>

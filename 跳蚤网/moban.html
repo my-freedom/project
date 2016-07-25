@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link rel="stylesheet" href="style.css" type="text/css" />
+<script>
+    // JavaScript Document
+function getLength(str){
+    return str.replace(/[^\x00-xff]/g,"xx").length;//这里的正则\x00-xff是不是写错了，少了一个转义符？？？
+     
+    }
+ 
+window.onload=function(){
+    var aInput=document.getElementByTagName("input");
+    var oName=aInput[0];
+    var pwd=aInput[1];
+    var pwd2=aInput[2];
+    var aP=document.getElementByTagName("p");
+    var name_msg=aP[0];
+    var pwd_msg=aP[1];
+    var pwd2_msg=aP[2];
+    var count=document.getElementById("count");
+    var aEm=document.getElementByTagName("em");
+    var name_length=0;//为什么赋值为0？？
+     
+//1.数字、字母（\w）  汉字\u4e00-\u9fa5
+//5-25个字符，一个汉字为两个字符，推荐使用中文会员名
+ 
+ 
+    //用户名
+    oName.onfocus=function(){
+        name_msg.style.display="block";
+        name_msg.innerHTML='<i class="ati"></i> 5-25个字符，一个汉字为两个字符，推荐使用中文会员名'
+         
+         
+        };
+    oName.onkeyup=function(){
+         count.style.visibility="visiable";
+         name_length=getLength(this.value);
+         count.innerHTML=name_length+'个字符'；
+         if(name_length==0){
+             count.style.visibility="hidden";
+             }
+        };
+         
+    oName.onblur=function(){
+        //含非法字符
+             var re=/[^\w\u4e00-\u9fa5]/g;
+             if(re.test(this.value)){
+                 name_msg.innerHTML='<i class="err"><i>含非法字符!'
+                 }
+             else if(this.value==""){
+                name_msg.innerHTML='<i class="err"><i>不能为空!'
+                 }
+             else if(name_length>25){
+                name_msg.innerHTML='<i class="err"><i>长度超过25个字符!'
+                 }  
+             else if(name_length<6){
+                name_msg.innerHTML='<i class="err"><i>长度少于6个字符!'
+                 }         };
+             else{
+                name_msg.innerHTML='<i class="ok"><i>OK!'
+                 }    
+     
+     
+     
+    }
+</script>
+</head>
+ 
+<body>
+<form>
+    <!--会员名-->
+    <div>
+        <label>
+            <span>会员名：</span>
+            <input type="text" class="text" id="memberName"/>
+        </label>
+        <p class="msg">
+            <i></i>
+            5-25个字符，一个汉字为两个字符，推荐使用中文会员名
+        </p>
+    </div>
+    <div>
+        <label>
+            <span></span>
+            <b id="count">0个字符</b>
+        </label>
+    </div>
+  
+    <!--密码-->
+    <div>
+        <label>
+            <span>登陆密码：</span>
+            <input type="password" class="text" />
+        </label>
+        <p class="msg">
+            <i></i>
+            5-25个字符，一个汉字为两个字符，推荐使用中文会员名
+        </p>
+    </div>
+  
+    <div style="margin:3px 0 10px 0">
+        <label>
+            <span></span>
+            <em class="active">弱</em>
+            <em>中</em>
+            <em>强</em>
+        </label>
+    </div>
+  
+    <!--确认密码-->
+    <div style="padding-bottom:20px">
+        <label>
+            <span>确认密码：</span>
+            <input type="password" class="text disabled=" />
+        </label>
+        <p class="msg">
+            <i></i>
+            请再输一次
+        </p>
+    </div>
+  
+    <!--验证码-->
+    <div>
+        <label>
+            <span>验证码：</span>
+            <input type="text" class="text" style="width:50px" />
+            <img class="ver_img" src="img/verification_code.png">
+            <a class="changeimg" href="#" title="重新获取验证码"></a>
+        </label>
+    </div>
+  
+    <!--提交按钮-->
+    <div>
+        <input class="submitBtn btn" type="submit" value="同意协议并注册">
+    </div>
+  
+</form>
+</body>
+</html>

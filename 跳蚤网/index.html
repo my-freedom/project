@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="data-spm" content="a2107" />
+<title>跳蚤市场 - 淘！我喜欢</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="imagetoolbar" content="no" />
+<link rel="stylesheet" href="index.css" type="text/css" />
+<script>
+ window.onload = function () {
+            var container = document.getElementById('main');
+            var list = document.getElementById('list');
+            /*五个按钮*/
+            var buttons = document.getElementById('buttons').getElementsByTagName('span');
+            /*两个箭头*/
+            var prev = document.getElementById('prev');
+            var next = document.getElementById('next');
+            var index = 1;/*用来存放当前显示的是第几张图片*/
+            var len = 5;
+            var animated = false;/*布尔值，用于判断图片是否在切换*/
+            var interval = 3000;
+            var timer;
+            function animate (offset) {
+                if (offset == 0) {
+                    return;
+                }
+                animated = true;
+                var time = 300;/*位移总的时间*/
+                var inteval = 10;/*位移间隔时间*/
+                var speed = offset/(time/inteval);/*位移速度*/
+                var left = parseInt(list.style.left) + offset;
+                /*位移的判断*/
+                var go = function (){
+                    if ( (speed > 0 && parseInt(list.style.left) < left) || (speed < 0 && parseInt(list.style.left) > left)) {
+                        list.style.left = parseInt(list.style.left) + speed + 'px';
+                        setTimeout(go, inteval);/*递归，10毫秒调用一次*/
+                    }
+                    else {
+                        list.style.left = left + 'px';
+                        if(left>-200){
+                            list.style.left = -600 * len + 'px';
+                        }
+                        if(left<(-600 * len)) {
+                            list.style.left = '-600px';
+                        }
+                        animated = false;
+                    }
+                }
+                go();
+            }
+             /*亮起小圆点*/
+           function showButton() {
+            /*其他圆点变暗*/
+                for (var i = 0; i < buttons.length ; i++) {
+                    if( buttons[i].className == 'on'){
+                        buttons[i].className = '';
+                        break;
+                    }
+                }
+               /* 当前圆点变亮*/
+                buttons[index - 1].className = 'on';
+            }
+           /* 做自动播放*/
+            function play() {
+                timer = setTimeout(function () {
+                    next.onclick();
+                    play();
+                }, interval);
+            }
+            /*清除定时器*/
+            function stop() {
+                clearTimeout(timer);
+            }
+            /*右箭头*/
+            next.onclick = function () {
+                if (animated) {
+                    return;
+                }
+                /*index不能大于5*/
+                if (index == 5) {
+                    index = 1;
+                }
+                else {
+                    index += 1;
+                }
+                animate(-600);/*向右切换*/
+                showButton();
+            }
+            /*左箭头*/
+            prev.onclick = function () {
+                if (animated) {
+                    return;
+                }
+                /*index不能小于1*/
+                if (index == 1) {
+                    index = 5;
+                }
+                else {
+                    index -= 1;
+                }
+                animate(600);/*向左切换*/
+                showButton();
+            }
+            /*s给每个圆点加上事件*/
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].onclick = function () {
+                    if (animated) {
+                        return;
+                    }
+                    if(this.className == 'on') {
+                        return;
+                    }
+                    /*获取按钮的index属性值*/
+                    var myIndex = parseInt(this.getAttribute('index'));
+                    var offset = -600 * (myIndex - index);/*计算偏移量*/
+
+                    animate(offset);
+                    index = myIndex;
+                    showButton();
+                }
+            }
+             /*鼠标移上去停止播放*/
+            container.onmouseover = stop;
+           /* 鼠标移开继续播放*/
+            container.onmouseout = play;
+
+            play();
+            
+       }
+       /*展开与收起*/
+       function showdiv(){ 
+            var c=document.documentElement.scrollTop || document.body.scrollTop; 
+            var a=document.getElementById("pn");
+            var b=document.getElementById("dao");
+            var d=document.documentElement.scrollBottom || document.body.scrollBottom;
+            if(b.innerHTML=="更多精品"){
+              a.style.display="block";
+              b.innerHTML="收起";
+              document.documentElement.scrollTop = document.body.scrollTop +=400;
+            }
+             else{
+              a.style.display="none";
+              b.innerHTML="更多精品";
+            }
+           } 
+</script>
+</head>
+<body>
+  <div class="top"><span><a href="login.html">亲，请登录</a></span><span><a href="tiaosao.html">免费注册</a></span><span><a href="http://ai.taobao.com/?pid=mm_26632323_6762370_25910879">手机登录</a></span>
+  <ul><li>分类导航</li><li>商品分类</li><li>联系客服</li><li>我的收藏</li><li>购物车</li><li>我的账单</li><li>首页</li></ul>
+  </div>
+  <div class="search">
+     <img src="images/logo.png">
+     <form>
+       <input type="text" class="search-text" name="q"/>
+       <input type="submit" class="search-button" value=""/>
+     </form>
+     <div class="lo">
+     <img src="images/logo1.png">
+     </div>
+     <div class="fo">
+     <ul><li>超值好货</li><li>9.9疯抢</li><li>超划算</li><li>买手专辑</li><li>穿衣搭配</li><li>今日头条</li><li>新品推荐</li><li>跳蚤市场</li></ul>
+     </div>
+  </div>
+  <div class="left">
+    <ul >
+        <li class="cat-1">
+          <i></i>
+          <p>外套 品牌装 秋季新品</p>
+          <h3>新款服装</h3>
+        </li>
+        <li class="cat-2">
+          <i></i>
+          <p>篮球鞋 各式包 帆布鞋</p>
+          <h3>鞋包配饰</h3>
+        </li>
+        <li class="cat-3">
+          <i></i><p>山地车 运动外套 钓竿</p>
+          <h3>运动户外</h3>
+        </li>
+        <li class="cat-4">
+          <i></i><p>手表 精美项链 金手镯</p>
+          <h3>珠宝手表</h3>
+        </li>
+        <li class="cat-5">
+          <i></i><p>笔记本 平板电脑 单反</p>
+          <h3>手机数码</h3>
+        </li>
+        <li class="cat-6">
+          <i></i><p>冰箱 洗衣机 智能空调</p>
+          <h3>家电办公</h3>
+        </li>
+        <li class="cat-7">
+          <i></i><p>护肤品 化妆品 卸妆液</p>
+          <h3>护肤彩妆</h3>
+        </li>
+        <li class="cat-8" >
+          <i></i><p>奶粉 婴儿装 婴儿玩具</p>
+          <h3>母婴用品</h3>
+        </li>
+      </ul>
+  </div>
+  <div class="right">
+  </div>
+  <div class="mid">
+        <p class="slide">
+            <div href="javascript:showdiv();" id="strHref" class="btn-slide"><span><a href="http://ai.taobao.com/?pid=mm_26632323_6762370_25910879">服装</a></span><span><a href="http://ai.taobao.com/?pid=mm_26632323_6762370_25910879">鞋子</a></span><span><a href="http://ai.taobao.com/?pid=mm_26632323_6762370_25910879">各式包</a></span><span><a href="http://ai.taobao.com/?pid=mm_26632323_6762370_25910879">首饰</a></span><span><a href="http://ai.taobao.com/?pid=mm_26632323_6762370_25910879">发饰</a></span><span><a href="http://ai.taobao.com/?pid=mm_26632323_6762370_25910879">香水</a></span><span><a href="http://ai.taobao.com/?pid=mm_26632323_6762370_25910879">护肤品</a></span><span><a href="http://ai.taobao.com/?pid=mm_26632323_6762370_25910879">电器</a></span><span><a href="http://ai.taobao.com/?pid=mm_26632323_6762370_25910879">化妆品</a></span><span><a href="http://ai.taobao.com/?pid=mm_26632323_6762370_25910879">新款外套</a></span><span><a href="http://ai.taobao.com/?pid=mm_26632323_6762370_25910879">配饰</a></span></div>
+        </p>
+      <div id="main">
+        <div id="list" style="left: -600px;">
+        <img src="images/5.png" alt="1"/>
+        <img src="images/1.png" alt="1"/>
+        <img src="images/2.png" alt="2"/>
+        <img src="images/3.png" alt="3"/>
+        <img src="images/4.png" alt="4"/>
+        <img src="images/5.png" alt="5"/>
+        <img src="images/1.png" alt="5"/>
+        </div>
+        <div id="buttons">
+        <span index="1" class="on"></span>
+        <span index="2"></span>
+        <span index="3"></span>
+        <span index="4"></span>
+        <span index="5"></span>
+        </div> 
+        <a href="javascript:;" id="prev" class="arrow">&lt;</a>
+        <a href="javascript:;" id="next" class="arrow">&gt;</a>
+      </div>
+  </div>
+  <div class="pro">
+    <ul>
+    <li>
+      <div class="con">
+      <a href="#" class="a-img ">
+        <img src="images/pro1.jpg" />
+      </a>
+      <p>
+        <a class="a1" href="http://ai.taobao.com/?pid=mm_26632323_6762370_25910879">栖云山庄奶油口味碧根果236g 手剥长寿果坚果炒货 山核桃干果零食</a>
+        <span class="pride">¥29.90<button id="bao">包邮</button></span>
+      </p> 
+      </div>
+    </li>
+     
+     <li>
+      <div class="con">
+      <a href="http://ai.taobao.com/?pid=mm_26632323_6762370_25910879" class="a-img">
+        <img src="images/pro2.jpg"/>
+      </a>
+      <p>
+        <a class="a1" href="#">零食大礼包送女友炒货小吃特产休闲美食品膨化办公室好吃的一箱的</a>
+        <span class="pride">¥19.90<button id="bao">包邮</button></span>
+       </p> 
+       </div>
+    </li><li>
+      <div class="con">
+      <a href="http://ai.taobao.com/?pid=mm_26632323_6762370_25910879" class="a-img">
+        <img src="images/pro3.jpg"/>
+      </a>
+      <p>
+        <a class="a1" href="#">包邮 泰国进口零食品 好吃卡乐美原味大罐虾条110g*3罐组合</a>
+        <span class="pride">¥29.90<button id="bao">包邮</button></span>
+       </p> 
+       </div>
+    </li>
+    <li>
+      <div class="con">
+      <a href="http://ai.taobao.com/?pid=mm_26632323_6762370_25910879" class="a-img">
+        <img src="images/pro4.jpg"/>
+      </a>
+      <p>
+        <a class="a1" href="#">包邮零食大礼包女组合套餐一箱的送女朋友儿童好吃的休闲零食50包</a>
+        <span class="pride">¥38.99<button id="bao">包邮</button></span>
+       </p> 
+       </div>
+    </li><li>
+      <div class="con">
+      <a href="http://ai.taobao.com/?pid=mm_26632323_6762370_25910879" class="a-img">
+        <img src="images/pro5.jpg"/>
+      </a>
+      <p>
+        <a class="a1" href="http://ai.taobao.com/?pid=mm_26632323_6762370_25910879">老北京特产御食园果仁茯苓夹饼500g特色休闲小吃美味好吃的零食</a>
+        <span class="pride">¥36.99<button id="bao">包邮</button></span>
+       </p> 
+       </div>
+    </li>
+    <li>
+      <div class="con">
+      <a href="http://ai.taobao.com/?pid=mm_26632323_6762370_25910879" class="a-img">
+        <img src="images/pro6.jpg"/>
+      </a>
+      <p>
+        <a class="a1" href="http://ai.taobao.com/?pid=mm_26632323_6762370_25910879">麦吉士咔吃卡吃爆米花2罐装 奶油味焦糖味自由组合装 看电影必备</a>
+        <span class="pride">¥19.90<button id="bao">包邮</button></span>
+       </p> 
+       </div>
+    </li><li>
+      <div class="con">
+      <a href="http://ai.taobao.com/?pid=mm_26632323_6762370_25910879" class="a-img">
+        <img src="images/pro7.jpg"/>
+      </a>
+      <p>
+        <a class="a1" href="http://ai.taobao.com/?pid=mm_26632323_6762370_25910879">麦吉士咔吃卡吃爆米花2罐装 奶油味焦糖味自由组合装 看电影必备</a>
+        <span class="pride">¥29.90<button id="bao">包邮</button></span>
+       </p> 
+       </div>
+    </li><li>
+      <div class="con">
+      <a href="http://ai.taobao.com/?pid=mm_26632323_6762370_25910879" class="a-img">
+        <img src="images/pro8.jpg"/>
+      </a>
+      <p>
+        <a class="a1" href="#">6枚 云南玫瑰鲜花饼美食特产糕点好吃的小吃休闲零食品店批发包邮</a>
+        <span class="pride">¥39.90<button id="bao">包邮</button></span>
+       </p> 
+       </div>
+    </li>
+    </ul>
+    <div id="pn" style="display:none">
+      <ul>
+        <li>
+         <div class="con">
+         <a href="#" class="a-img">
+        <img src="images/pro8.jpg"/>
+        </a>
+         <p>
+        <a class="a1" href="#">6枚 云南玫瑰鲜花饼美食特产糕点好吃的小吃休闲零食品店批发包邮</a>
+        <span class="pride">¥39.90<button id="bao">包邮</button></span>
+        </div>
+       </li>
+       <li>
+         <div class="con">
+         <a href="#" class="a-img">
+        <img src="images/pro8.jpg"/>
+        </a>
+         <p>
+        <a class="a1" href="#">6枚 云南玫瑰鲜花饼美食特产糕点好吃的小吃休闲零食品店批发包邮</a>
+        <span class="pride">¥39.90<button id="bao">包邮</button></span>
+        </p> 
+        </div>
+       </li>
+       <li>
+         <div class="con">
+         <a href="#" class="a-img">
+        <img src="images/pro8.jpg"/>
+        </a>
+         <p>
+        <a class="a1" href="#">6枚 云南玫瑰鲜花饼美食特产糕点好吃的小吃休闲零食品店批发包邮</a>
+        <span class="pride">¥39.90<button id="bao">包邮</button></span>
+        </p> 
+        </div>
+       </li>
+       <li>
+         <div class="con">
+         <a href="#" class="a-img">
+        <img src="images/pro8.jpg"/>
+        </a>
+         <p>
+        <a class="a1" href="#">6枚 云南玫瑰鲜花饼美食特产糕点好吃的小吃休闲零食品店批发包邮</a>
+        <span class="pride">¥39.90<button id="bao">包邮</button></span>
+        </p> 
+        </div>
+       </li>
+      </ul>
+    </div>
+    <div id="gengduo"><a href="javascript:showdiv();" id="dao">更多精品</a></div>
+  </div>
+  
+</body>
+</html>

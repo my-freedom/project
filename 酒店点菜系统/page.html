@@ -1,0 +1,495 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+  <head>
+    <meta  http-equiv="content-type" content="text/html" charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="page.css"/>
+     <link rel="stylesheet" type="text/css" href="page1.css"/>
+    <title>hello</title>
+  </head>
+  <script> /*function shopping(){
+               var cartTable = document.getElementById('cartTable');//获取表格
+            var tr = cartTable.children[1].rows;//获取
+       //遍历所有的checkbox
+       var priceTotal = document.getElementById('priceTotal');//结算价格
+           var food=document.getElementsByName("food");
+           for (var i=0; i<food.length;i++){
+          //判断是否选择
+             if(food[i].checked){
+              tr[i].style.display="block";
+              tr[i].getElementsByTagName('input')[0].checked=true;
+              price += parseFloat(tr[i].cells[4].innerHTML);
+             }
+             else{
+              tr[i].style.display="none";
+             }
+       }
+     }*/
+     window.onload = function () {
+
+            var cartTable = document.getElementById('cartTable');//获取表格
+            var tr = cartTable.children[1].rows;//获取表格的第二个孩子tbody的所有行
+            var food=document.getElementsByName("food");
+            var checkInputs = document.getElementsByClassName('check');//获取所有的input
+            var checkAllInputs = document.getElementsByClassName('check-all');//获取全选的input
+            var priceTotal = document.getElementById('priceTotal');//结算价格
+            var selected = document.getElementById('selected');//
+            var foot = document.getElementById('foot');//
+            // 为了解决IE的兼容性
+            if (!document.getElementsByClassName) {
+                document.getElementsByClassName = function (cls) {
+                    var ret = [];
+                    var els = document.getElementsByTagName('*');
+                    for (var i = 0, len = els.length; i < len; i++) {
+                        if (els[i].className === cls
+                                || els[i].className.indexOf(cls + ' ') >= 0
+                                || els[i].className.indexOf(' ' + cls + ' ') >= 0
+                                || els[i].className.indexOf(' ' + cls) >= 0) {
+                            ret.push(els[i]);
+                        }
+                    }
+                    return ret;
+                }
+            }
+
+            //计算函数getTotal，计算总价格
+            function getTotal() {
+                var price = 0;
+                for (var i = 0, len = tr.length; i < len; i++) {
+                    if (tr[i].getElementsByTagName('input')[0].checked) {
+                        price += parseFloat(tr[i].cells[4].innerHTML);
+                        /**/
+                    }
+                }
+                priceTotal.innerHTML = price.toFixed(2);
+                /**/
+                if (seleted == 0) {
+                    foot.className = 'foot';
+                }
+            }
+
+            //小计价格函数getSubTotal
+            function getSubTotal(tr) {
+                var tds = tr.cells;
+                var price = parseFloat(tds[2].innerHTML);
+                var count = parseInt(tr.getElementsByTagName('input')[1].value);
+                var SubTotal = parseFloat(price * count);
+                tds[4].innerHTML = SubTotal.toFixed(2);
+            }
+
+            //绑定勾选框事件
+            for (var i = 0 , len = checkInputs.length; i < len; i++) {
+                checkInputs[i].onclick = function () {
+                    if (this.className === 'check-all check') {
+                        for (var j = 0; j < checkInputs.length; j++) {
+                            checkInputs[j].checked = this.checked;
+                        }
+                    }
+                    if (this.checked == false) {
+                        for (var k = 0; k < checkAllInputs.length; k++) {
+                            checkAllInputs[k].checked = false;
+                        }
+                    }
+                    getTotal();
+                }
+            }
+            for (var i = 0; i < tr.length; i++) {
+
+                //表格每一行上事件代理
+                tr[i].onclick = function (e) {
+                    e = e || window.event;
+                    var el = e.srcElement;
+                    var cls = el.className;
+                    var input = this.getElementsByTagName('input')[1];
+                    var val = parseInt(input.value);
+                    var reduce = this.getElementsByTagName('span')[1];
+                    switch (cls) {
+                        case 'add':
+                            input.value = val + 1;
+                            reduce.innerHTML = '-';
+                            getSubTotal(this);
+                            break;
+                        case 'reduce':
+                            if (val > 1) {
+                                input.value = val - 1;
+                            }
+                            if (input.value <= 1) {
+                                reduce.innerHTML = '';
+                            }
+                            getSubTotal(this);
+                            break;
+                        case 'delete':
+                            var conf = confirm('确定要删除吗？');
+                            if (conf) {
+                                this.parentNode.removeChild(this);
+                            }
+                            break
+                        default :
+                            break;
+                    }
+                    getTotal();
+                }
+
+                //绑定数量输入框事件，实时更新小计价格
+                tr[i].getElementsByTagName('input')[1].onkeyup = function () {
+                    var val = parseInt(this.value);
+                    var tr = this.parentNode.parentNode
+                    var reduce = tr.getElementsByTagName('span')[1];
+                    if (isNaN(val) || val < 1) {
+                        val = 1;
+                    }
+                    this.value = val;
+                    if (val <= 1) {
+                        reduce.innerHTML = '';
+                    }
+                    else {
+                        reduce.innerHTML = '-';
+                    }
+                    getSubTotal(tr);
+                    getTotal();
+                }
+            }
+
+            // 默认选择所有商品
+        // checkAllInputs[0].checked = true;
+          //  checkAllInputs[0].onclick();
+        }
+  </script>
+<body>
+  <div class="top">
+    <div class="top_1">
+      <a>欢迎光临</a>
+       <ul>
+        <li>美味</li>
+        <li>健康</li>
+        <li>营养</li>
+        <li>丰富</li>
+        <li>养生</li>
+      </ul> 
+    </div>
+    <div class="top_2"></div>
+    <img src="images/logo.png">
+      <ul>
+        <li>首页</li>
+        <li>酒店动态</li>
+        <li>产品展示</li>
+        <li>最新菜式</li>
+        <li>关于我们</li>
+        <li>联系我们</li>
+      </ul>
+  </div>
+  <div class="main">
+    <div class="ad"></div>
+      <div class="menu">
+        <ul>
+    <li>
+      <div class="con">
+      <a href="#" class="a-img ">
+        <img src="images/menu1.png" />
+      </a>
+      <p>
+        <a class="a1" href="#">爆炒肉丝</a>
+        <span class="pride">¥29.90<input type="checkbox" name="food" onclick="shopping()" value="29.90"><!-- 数量<input type="text" id="t1"> --></span>
+      </p> 
+      </div>
+    </li>
+     <li>
+      <div class="con">
+      <a href="#" class="a-img">
+        <img src="images/menu2.png"/>
+      </a>
+      <p>
+        <a class="a1" href="#">美味雪筒</a>
+        <span class="pride">¥19.90<input type="checkbox" name="food" onclick="shopping()" value="19.90"></span>
+       </p> 
+       </div>
+    </li><li>
+      <div class="con">
+      <a href="#" class="a-img">
+        <img src="images/menu3.png"/>
+      </a>
+      <p>
+        <a class="a1" href="#">春秋惬意</a>
+        <span class="pride">¥20.00<input type="checkbox" name="food" onclick="shopping()" value="20.00"></span>
+       </p> 
+       </div>
+    </li>
+    <li>
+      <div class="con">
+      <a href="#" class="a-img">
+        <img src="images/menu4.png"/>
+      </a>
+      <p>
+        <a class="a1" href="#">红烧牛肉</a>
+        <span class="pride">¥38.00<input type="checkbox" name="food" onclick="shopping()" value="38.00"></span>
+       </p> 
+       </div>
+    </li><li>
+      <div class="con">
+      <a href="#" class="a-img">
+        <img src="images/menu5.png"/>
+      </a>
+      <p>
+        <a class="a1" href="#">华夫饼水果套餐</a>
+        <span class="pride">¥36.00<input type="checkbox" name="food" onclick="shopping()" value="36.00"></span>
+       </p> 
+       </div>
+    </li>
+    <li>
+      <div class="con">
+      <a href="#" class="a-img">
+        <img src="images/menu6.png"/>
+      </a>
+      <p>
+        <a class="a1" href="#">尖椒炒大肠</a>
+        <span class="pride">¥18.00<input type="checkbox" name="food" onclick="shopping()" value="18.00"></span>
+       </p> 
+       </div>
+    </li><li>
+      <div class="con">
+      <a href="#" class="a-img">
+        <img src="images/menu7.png"/>
+      </a>
+      <p>
+        <a class="a1" href="#">煎三文鱼扒配土豆泥</a>
+        <span class="pride">¥28.00<input type="checkbox" name="food" onclick="shopping()" value="28.00"></span>
+       </p> 
+       </div>
+    </li><li>
+      <div class="con">
+      <a href="#" class="a-img">
+        <img src="images/menu8.png"/>
+      </a>
+      <p>
+        <a class="a1" href="#">客家麻辣豆腐</a>
+        <span class="pride">¥18.00<input type="checkbox" name="food" onclick="shopping()" value="18.00"></span>
+       </p> 
+       </div>
+    </li>
+        <li>
+         <div class="con">
+         <a href="#" class="a-img">
+        <img src="images/menu9.png"/>
+        </a>
+         <p>
+        <a class="a1" href="#">芒果西米露</a>
+        <span class="pride">¥10.00<input type="checkbox" name="food" onclick="shopping()" value="10.00"></span>
+        </div>
+       </li>
+       <li>
+         <div class="con">
+         <a href="#" class="a-img">
+        <img src="images/menu10.png"/>
+        </a>
+         <p>
+        <a class="a1" href="#">梅子红烧肉</a>
+        <span class="pride">¥20.00<input type="checkbox" name="food" onclick="shopping()" value="20.00"></span>
+        </p> 
+        </div>
+       </li>
+       <li>
+         <div class="con">
+         <a href="#" class="a-img">
+        <img src="images/menu11.png"/>
+        </a>
+         <p>
+        <a class="a1" href="#">萨拉米肠牛肉披萨</a>
+        <span class="pride">¥39.00<input type="checkbox" name="food" onclick="shopping()" value="39.00"></span>
+        </p> 
+        </div>
+       </li>
+       <li>
+         <div class="con">
+         <a href="#" class="a-img">
+        <img src="images/menu12.png"/>
+        </a>
+         <p>
+        <a class="a1" href="#">酸辣金针菇肥牛</a>
+        <span class="pride">¥48.00<input type="checkbox" name="food" onclick="shopping()" value="48.00"></span>
+        </p> 
+        </div>
+       </li>
+       <li>
+         <div class="con">
+         <a href="#" class="a-img">
+        <img src="images/menu13.png"/>
+        </a>
+         <p>
+        <a class="a1" href="#">酸甜鲈鱼</a>
+        <span class="pride">¥39.00<input type="checkbox" name="food" onclick="shopping()" value="39.00"></span>
+        </p> 
+        </div>
+       </li>
+       <li>
+         <div class="con">
+         <a href="#" class="a-img">
+        <img src="images/menu14.png"/>
+        </a>
+         <p>
+        <a class="a1" href="#">铁锅牛肉</a>
+        <span class="pride">¥42.00<input type="checkbox" name="food" onclick="shopping()" value="42.00"></span>
+        </p> 
+        </div>
+       </li>
+       <li>
+         <div class="con">
+         <a href="#" class="a-img">
+        <img src="images/menu15.png"/>
+        </a>
+         <p>
+        <a class="a1" href="#">西班牙牛肉</a>
+        <span class="pride">¥48.00<input type="checkbox" name="food" onclick="shopping()" value="48.00"></span>
+        </p> 
+        </div>
+       </li>
+      </ul>
+      </div>
+      <div class="serves"></div>
+  </div>
+  <table id="cartTable">
+        <tr class="head_ch">
+          <td>
+            <span class="ch1">选择</span>
+            <span class="ch2">商品</span>
+            <span class="ch3">单价</span>
+            <span class="ch4">数量</span>
+            <span class="ch5">小计</span>
+          </td>
+        </tr>       
+    <tbody>
+        <tr id="0"  style="display:none">
+            <td class="checkbox"><input class="check-one check" type="checkbox"/></td>
+            <td class="goods" ><img src="images/menu1.png" alt=""/><span>爆炒肉丝</span></td>
+            <td class="price" >29.90</td>
+            <td class="count" ><span class="reduce"></span><input class="count-input" type="text" value="1"/><span class="add">+</span></td>
+            <td class="subtotal">29.90</td>
+        </tr>
+        <tr id="1" style="display:none">
+            <td class="checkbox"><input class="check-one check" type="checkbox"/></td>
+            <td class="goods"><img src="images/menu2.png" alt=""/><span>美味雪筒</span></td>
+            <td class="price">19.90</td>
+            <td class="count"><span class="reduce"></span><input class="count-input" type="text" value="1"/><span class="add">+</span></td>
+            <td class="subtotal">19.90</td>
+        </tr id="2">
+        <tr style="display:none">
+            <td class="checkbox"><input class="check-one check" type="checkbox"/></td>
+            <td class="goods"><img src="images/menu3.png" alt=""/><span>春秋惬意</span></td>
+            <td class="price">20.00</td>
+            <td class="count"><span class="reduce"></span><input class="count-input" type="text" value="1"/><span class="add">+</span></td>
+            <td class="subtotal">20.00</td>
+        </tr>
+        <tr style="display:none">
+            <td class="checkbox"><input class="check-one check" type="checkbox"/></td>
+            <td class="goods"><img src="images/menu4.png" alt=""/><span>红烧牛肉</span></td>
+            <td class="price">38.00</td>
+            <td class="count"><span class="reduce"></span><input class="count-input" type="text" value="1"/><span class="add">+</span></td>
+            <td class="subtotal">38.00</td>
+        </tr>
+        <tr style="display:none">
+            <td class="checkbox"><input class="check-one check" type="checkbox"/></td>
+            <td class="goods"><img src="images/menu5.png" alt=""/><span>华夫饼水果拼盘</span></td>
+            <td class="price">36.00</td>
+            <td class="count"><span class="reduce"></span><input class="count-input" type="text" value="1"/><span class="add">+</span></td>
+            <td class="subtotal">36.00</td>
+        </tr>
+        <tr style="display:none">
+            <td class="checkbox"><input class="check-one check" type="checkbox"/></td>
+            <td class="goods"><img src="images/menu6.png" alt=""/><span>尖椒炒大肠</span></td>
+            <td class="price">18.00</td>
+            <td class="count"><span class="reduce"></span><input class="count-input" type="text" value="1"/><span class="add">+</span></td>
+            <td class="subtotal">18.00</td>
+        </tr>
+        <tr style="display:none">
+            <td class="checkbox"><input class="check-one check" type="checkbox"/></td>
+            <td class="goods"><img src="images/menu7.png" alt=""/><span>煎三文鱼扒配土豆泥</span></td>
+            <td class="price">28.00</td>
+            <td class="count"><span class="reduce"></span><input class="count-input" type="text" value="1"/><span class="add">+</span></td>
+            <td class="subtotal">28.00</td>
+        </tr>
+        <tr style="display:none">
+            <td class="checkbox"><input class="check-one check" type="checkbox"/></td>
+            <td class="goods"><img src="images/menu8.png" alt=""/><span>客家麻辣豆腐</span></td>
+            <td class="price">18.00</td>
+            <td class="count"><span class="reduce"></span><input class="count-input" type="text" value="1"/><span class="add">+</span></td>
+            <td class="subtotal">18.00</td>
+        </tr>
+        <tr style="display:none">
+            <td class="checkbox"><input class="check-one check" type="checkbox"/></td>
+            <td class="goods"><img src="images/menu9.png" alt=""/><span>芒果西米露</span></td>
+            <td class="price">10.00</td>
+            <td class="count"><span class="reduce"></span><input class="count-input" type="text" value="1"/><span class="add">+</span></td>
+            <td class="subtotal">10.00</td>
+        </tr>
+        <tr style="display:none">
+            <td class="checkbox"><input class="check-one check" type="checkbox"/></td>
+            <td class="goods"><img src="images/menu10.png" alt=""/><span>梅子红烧肉</span></td>
+            <td class="price">20.00</td>
+            <td class="count"><span class="reduce"></span><input class="count-input" type="text" value="1"/><span class="add">+</span></td>
+            <td class="subtotal">20.00</td>
+        </tr>
+        <tr style="display:none">
+            <td class="checkbox"><input class="check-one check" type="checkbox"/></td>
+            <td class="goods"><img src="images/menu11.png" alt=""/><span>拉萨米肠牛肉披萨</span></td>
+            <td class="price">39.00</td>
+            <td class="count"><span class="reduce"></span><input class="count-input" type="text" value="1"/><span class="add">+</span></td>
+            <td class="subtotal">39.00</td>
+        </tr>
+        <tr style="display:none">
+            <td class="checkbox"><input class="check-one check" type="checkbox"/></td>
+            <td class="goods"><img src="images/menu12.png" alt=""/><span>酸辣金针菇肥牛</span></td>
+            <td class="price">48.00</td>
+            <td class="count"><span class="reduce"></span><input class="count-input" type="text" value="1"/><span class="add">+</span></td>
+            <td class="subtotal">48.00</td>
+        </tr>
+        <tr style="display:none">
+            <td class="checkbox"><input class="check-one check" type="checkbox"/></td>
+            <td class="goods"><img src="images/menu13.png" alt=""/><span>酸甜鲈鱼</span></td>
+            <td class="price">39.00</td>
+            <td class="count"><span class="reduce"></span><input class="count-input" type="text" value="1"/><span class="add">+</span></td>
+            <td class="subtotal">39.00</td>
+        </tr>
+        <tr style="display:none">
+            <td class="checkbox"><input class="check-one check" type="checkbox"/></td>
+            <td class="goods"><img src="images/menu14.png" alt=""/><span>铁锅牛肉</span></td>
+            <td class="price">42.00</td>
+            <td class="count"><span class="reduce"></span><input class="count-input" type="text" value="1"/><span class="add">+</span></td>
+            <td class="subtotal">42.00</td>
+        </tr>
+        <tr style="display:none">
+            <td class="checkbox"><input class="check-one check" type="checkbox"/></td>
+            <td class="goods"><img src="images/menu15.png" alt=""/><span>西班牙牛肉</span></td>
+            <td class="price">48.00</td>
+            <td class="count"><span class="reduce"></span><input class="count-input" type="text" value="1"/><span class="add">+</span></td>
+            <td class="subtotal">48.00</td>
+        </tr>
+    </tbody>
+</table>
+<div class="foot" id="foot">
+    <div class="fr closing">结 算</div>
+    <div class="fr total">合计：￥<span id="priceTotal">0.00</span></div>
+</div>
+</body>
+<script>
+function shopping(){
+               var cartTable = document.getElementById('cartTable');//获取表格
+            var tr = cartTable.children[1].rows;//获取
+       //遍历所有的checkbox
+       var priceTotal = document.getElementById('priceTotal');//结算价格
+           var food=document.getElementsByName("food");
+           var price = 0;
+           for (var i=0; i<food.length;i++){
+          //判断是否选择
+             if(food[i].checked){
+              tr[i].style.display="block";
+              tr[i].getElementsByTagName('input')[0].checked=true;
+              price += parseFloat(tr[i].cells[4].innerHTML);
+             }
+             else{
+              tr[i].style.display="none";
+             }
+       }
+       priceTotal.innerHTML = price.toFixed(2);
+     }
+     </script>
+</html>
