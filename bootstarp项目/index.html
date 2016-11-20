@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/jquery-2.1.3.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no">
+		<style>
+		body{
+			background:#F4F4F4;
+		}
+		nav{
+			margin:0 10px;
+		}
+		.logo{
+			float:left;
+		}
+		.navbar-brand{
+			font-size:20px;
+			font-weight: bold;
+		}
+		#all{
+			margin:30px 20px;
+			background:url(img/banner.png) no-repeat;
+			height:350px;
+			position: relative;
+			background-size: 100% 350px;
+		}
+		@media all and (max-width: 768px) {
+			#all{
+			background:url(img/bannerPhone.jpg) no-repeat;
+			background-size: 100% 200px;
+			height:200px!important;
+		    }
+		    .h{
+			display:none;
+		    }
+		}
+		.all1{
+			top:50%;
+			left:50%;
+			width:320px;
+			height:80px;
+			position: absolute;
+			margin:-40px -160px;
+		}
+		.info{
+			font-size:26px;
+			color:white;
+		}
+	    .search-box{
+	    	width:220px;
+	    	background:white;
+	    	border-radius: 5px;
+	    	float:left;
+	    	height:33px;
+	    }
+	    .search{
+	    	width:300px;
+	    	/*border:1px solid red;*/
+	    	height:40px;
+	    	position: absolute;
+	    	margin:0 10px;
+	    }
+	    .search-box input{
+	    	border:none;
+	    	outline: none;
+	    	margin:0 10px;
+	    }
+	    .search-btn{
+	    	float:left;
+	    	margin-left:10px;
+	    	border-radius: 5px;
+	    }	
+	    .info1{
+	    	position: absolute;
+	    	width:80px;
+	    	height:30px;
+	    	top:100%;
+	    	left:50%;
+	    	margin-left:-40px;
+	    	margin-top:-15px;
+	    }
+	    .row{
+	    	margin:0 10px;
+	    	position: relative;
+	    	height:190px;
+	    }
+	    .row img{
+	    	margin:0 auto;
+	    	width:100px;
+	    }
+	    .cx{
+	    	font-size:24px;
+	    	color:#269ABC;
+	    }
+	    .cx,p,#btn1{
+	    	text-align: center;
+	    }
+	    .mk1{
+	    	width:80%;
+	    	/*height:150px;*/
+	    	/*border:1px solid red;*/
+	    	position: absolute;
+	    	/*left:50px;
+	    	margin-left:-100px;*/
+	    	margin:0px 3%;
+	    }
+	    .floor-1{
+	    		/*border:1px solid red;*/
+	    		height:280px;
+	    }
+	    #btn1{
+	    	width:80px;
+	    	height:30px;
+	    	position: absolute;
+	    	left:50%;
+	    	margin-left:-40px;
+	    	margin-top:-10px;
+	    	box-shadow: 3px 3px 8px #8C8C8C;
+	    }
+	    #main{
+	    	position: relative;
+	    	
+	    }
+	    #btn2{
+	    	position: absolute;
+	    	top:100%;
+	    	left:50%;
+	    	width:80px;
+	    	height:30px;
+	    	margin-left:-40px;
+	    	margin-top:15px;
+	    	z-index: 1000;
+	    }
+	    #btn3{
+	    	position: absolute;
+	    	top:100%;
+	    	left:50%;
+	    	width:80px;
+	    	height:30px;
+	    	margin-left:-40px;
+	    	margin-top:20px;
+	    	z-index: 1000;
+	    	color:white;
+	    	background:#F98561;
+	    }
+	    #all4{
+	    	margin-top:10px;
+	    	background:#18739B;
+	    	position: relative;
+	    	margin:30px 20px;
+	    }
+	    .row{
+	    	margin:30px 10px;
+	    }
+	    .floor-2{
+	    	/*border:1px solid red;*/
+	    }
+	    .floor2{
+	    	/*width:200px;*/
+	    	height:140px;
+	    	/*border:1px solid red;*/
+	    	
+	    }
+	    .ex{
+	    	border:15px solid #B5D2DF;
+	    	border-radius: 50%;
+	    	height:280px;
+	    	width:280px;
+	    	margin:0 auto;
+	    	background:#0099CC;
+	    }
+	    .ex p{
+	    	width:200px;
+	    	height:200px;
+	    	color:white;
+	    	font-size:18px;
+	    	margin:70px auto;
+	    }
+	    .floor2 p{
+	    	color:white;
+	    	margin-top:10px;
+	    }
+	     #all5{
+	    	margin-top:20px;
+	    	background:#fff;
+	    	position: relative;
+	    	margin:0px 20px;
+	    }
+	    .floor3 p{
+	    	font-size:20px;
+	    	color:#B2B0C7;
+	    }
+	    #all6{
+	    	margin-top:0px;
+	    	background:#18739B;
+	    	position: relative;
+	    	margin:0px 20px;
+	    	height:auto;
+	    }
+	    /*.row{
+	    	width:300px;
+	    	height:300px;
+	    	border:1px solid red;
+	        margin:0 auto;
+	    }*/
+	   .f1{
+	   	font-size:20px;
+	   	font-weight: bold;
+	   	color:#C87460;
+	   }
+	   .wx img{
+	   	width:110px;
+	   }
+	   .wx{
+	   	border-right:1px solid #1185B7;
+	   }
+	   .wx1 div{
+	   	width:130px;
+	   /*	border:1px solid red;*/
+	   	height:40px;
+	   	font-size:18px;
+	   }
+	   .wx,.wx1{
+	   	height:190px;
+	   }
+		</style>
+	</head>
+	<body>
+		<!--第一部分-->
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="navbar-header">
+				<button class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+				<span class="sr-only"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+				<a href="#" class="logo"><img src="img/02.png"></a>
+				<a href="#" class="navbar-brand">沈阳同舟科技有限公司</a>
+			</div>
+			<div class="collapse navbar-collapse" id="menu">
+				<ul class="nav navbar-collapse navbar-nav navbar-right">
+					<li class="active"><a href="#">首页</a></li>
+					<li><a href="#">使用帮助</a></li>
+					<li><a href="#">后台管理</a></li>
+					<img src="img/01.png" class="h" height="50px"/>
+				</ul>
+			</div>
+		</nav>
+		
+		<!--第二部分-->
+		<div class="container-fluid" id="all">
+			<div class="all1">
+			    <div class="info">
+				同舟科技溯源综合查询平台
+			    </div>	
+			    <div class="search">
+				    <div class="search-box"><input type="text"/></div>
+				    <input class="search-btn btn btn-info" type="button" value="搜索"/>
+			    </div>
+			</div>
+			<div class="info1 btn btn-info">
+				溯源介绍
+			</div>
+		</div>
+	      <!-- 第三部分-->
+	    <div class="container-fluid" id="main">
+	    	<div class="row">
+	            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 floor-1">
+	     	       <img src="img/line1.png" width="100%" class="img-responsive"/>
+	     	       <div class="mk1" class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+	     	       	    <div class="cx">
+	     	       	    	网站查询
+	     	       	    </div>
+	     	       	    <p>some text that need to be field，some text that need to be field，some text that need to be field</p>
+	     	            <div id="btn1" class="btn btn-info">
+				                了解更多
+			            </div>
+	     	       </div>
+	           </div>
+	           <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 floor-1">
+	     	       <img src="img/line2.png" width="100%" class="img-responsive"/>
+	     	       <div class="mk1">
+	     	       	    <div class="cx" class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+	     	       	    	手机查询
+	     	       	    </div>
+	     	       	    <p>some text that need to be field，some text that need to be field，some text that need to be field</p>
+	     	            <div id="btn1" class="btn btn-info">
+				                了解更多
+			            </div>
+	     	       </div>
+	           </div>
+	           <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 floor-1">
+	     	       <img src="img/line3.png" width="100%" class="img-responsive"/>
+	     	       <div class="mk1"  class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+	     	       	    <div class="cx">
+	     	       	    	短信查询
+	     	       	    </div>
+	     	       	    <p>some text that need to be field，some text that need to be field，some text that need to be field</p>
+	     	            <div id="btn1" class="btn btn-info">
+				                了解更多
+			            </div>
+	     	       </div>
+	           </div>
+	           <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 floor-1">
+	     	      <img src="img/line4.png" width="100%" class="img-responsive"/>
+	     	      <div class="mk1"  class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+	     	       	    <div class="cx">
+	     	       	    	溯源查询
+	     	       	    </div>
+	     	       	    <p>some text that need to be field，some text that need to be field，some text that need to be field</p>
+	     	            <div id="btn1" class="btn btn-info">
+				                了解更多
+			            </div>
+	     	       </div>
+	            </div>
+		    </div>
+		     <div id="btn2" class="btn btn-info">
+				  功能介绍
+			</div>
+	    </div>
+	   <!-- 第四部分-->
+	    <div class="container-fluid" id="all4">
+	    	<div class="row">
+	            <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 floor-2">
+	            	<div class="floor2">
+	     	          <img src="img/line5.png" width="100%" class="img-responsive"/>
+	     	          <p>生产计划</p>
+	            	</div>
+	            	<div class="floor2">
+	     	          <img src="img/line6.png" width="100%" class="img-responsive"/>
+	     	          <p>生产计划</p>
+	            	</div>
+	           </div>
+	           <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 floor-2">
+	     	       <div class="floor2">
+	     	          <img src="img/line7.png" width="100%" class="img-responsive"/>
+	     	          <p>生产计划</p>
+	            	</div>
+	            	<div class="floor2">
+	     	          <img src="img/line8.png" width="100%" class="img-responsive"/>
+	     	          <p>生产计划</p>
+	            	</div>
+	           </div>
+	           <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 floor-2">
+	     	       <div class="floor2">
+	     	          <img src="img/line9.png" width="100%" class="img-responsive"/>
+	     	          <p>生产计划</p>
+	            	</div>
+	            	<div class="floor2">
+	     	          <img src="img/line10.png" width="100%" class="img-responsive"/>
+	     	          <p>生产计划</p>
+	            	</div>
+	     	       
+	           </div>
+	           <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 floor-2">
+	     	      <div class="floor2">
+	     	          <img src="img/line11.png" width="100%" class="img-responsive"/>
+	     	          <p>生产计划</p>
+	            	</div>
+	            	<div class="floor2">
+	     	          <img src="img/line12.png" width="100%" class="img-responsive"/>
+	     	          <p>生产计划</p>
+	            	</div>
+	     	 
+	            </div>
+	            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 floor-2 hidden-xs">
+	     	      <div class="ex">
+	     	         <p>被称之为“身份证”的是其实一张印有二维码和信息溯源码的标签贴纸，它类似于商品的条形码>></p>
+	            </div>
+		    </div>
+	       </div>
+	        <div id="btn3" class="btn">
+				  功能介绍
+			</div>
+	    </div>
+	   <!-- 第五部分-->
+	   <div class="container-fluid" id="all5">
+	    	<div class="row">
+	            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 floor-3">
+	            	<div class="floor3">
+	     	          <img src="img/line13.png" width="100%" class="img-responsive"/>
+	     	          <p>鱼类产品溯源</p>
+	            	</div>
+	            	<div class="floor3">
+	     	          <img src="img/line14.png" width="100%" class="img-responsive"/>
+	     	          <p>鱼类产品溯源</p>
+	            	</div>
+	           </div>
+	           <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 floor-3">
+	     	       <div class="floor3">
+	     	          <img src="img/line15.png" width="100%" class="img-responsive"/>
+	     	          <p>鱼类产品溯源</p>
+	            	</div>
+	            	<div class="floor3">
+	     	          <img src="img/line16.png" width="100%" class="img-responsive"/>
+	     	          <p>鱼类产品溯源</p>
+	            	</div>
+	           </div>
+	           <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 floor-3">
+	     	       <div class="floor3">
+	     	          <img src="img/line17.png" width="100%" class="img-responsive"/>
+	     	          <p>鱼类产品溯源</p>
+	            	</div>
+	            	
+	           </div>
+	           <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 floor-3">
+	     	      
+	            	<div class="floor3">
+	     	          <img src="img/line18.png" width="100%" class="img-responsive"/>
+	     	          <p>鱼类产品溯源</p>
+	            	</div>
+	           </div>
+		    </div>
+	       </div>
+	 <!--  第六部分-->
+	 <div class="container-fluid" id="all6">
+	 	<div class="row">
+	 	  <div class="wx2 col-lg-3 col-md-3 col-sm-0 col-xs-0 text-center">
+	      </div>
+	      <div class="wx col-lg-3 col-md-3 col-sm-6 col-xs-6 text-center">
+	      	 <p class="f1">微信公众号</p>
+	      	 <img src="img/weixin.png">
+	      		<p>用微信扫描二维码即可关注</p>
+	      </div>
+	      <div class="wx1 col-lg-3 col-md-3 col-sm-6 col-xs-6 text-center">
+	      	 <p class="f1">联系我们</p>
+	      	 <div class="glyphicon glyphicon-globe">010-8888888
+	      	 </div><br />
+	      	 <div class="glyphicon glyphicon-home">010-8888888
+	      	 </div><br />
+	      	 <div class="glyphicon glyphicon-envelope">010-8888888
+	      	 </div>
+	      </div>
+	      <div class="wx2 col-lg-3 col-md-3 col-sm-0 col-xs-0 text-center">
+	      </div>
+	      
+	 	</div>
+	 	 <p>沈阳同舟科技有限公司</p>
+	     <p>辽宁PICP备案号：999999999</p>
+	 </div>
+	</body>
+</html>
