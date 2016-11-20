@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no"> 
+		<link rel="stylesheet" href="css/jquery.mobile.css" />
+		<script type="text/javascript" src="js/jquery-2.1.3.min.js" ></script>
+		<script type="text/javascript" src="js/jquery.mobile.js" ></script>
+		<link rel="stylesheet" href="css/1.css" />
+		<script type="text/javascript" src="js/2.js" ></script>
+		<script type="text/javascript" src="js/1.js" ></script>
+<link href="video-js/video-js.css" rel="stylesheet" type="text/css">
+
+ <script src="video-js/video.js"></script>
+
+ <script>
+
+   videojs.options.flash.swf = "video-js/video-js.swf";
+
+ </script>
+
+
+	</head>
+	<body>
+		<div data-role="page">
+			<div data-role="header" class="head" data-position="fixed" data-theme="f">
+				<h1>欢迎来到优酷</h1>
+				<button data-inline="true" data-icon="search">搜索</button>
+				<button data-inline="true" data-icon="gear">设置</button>
+			</div>
+			<div data-role="content">
+				<div class="s" id="s">
+				    <div class="lb" >
+					    <img id="imgs" src="img/br-1.jpg"/>
+				    </div>
+				    <div class="c">
+					  <ul>
+						<li name="n" class="active">1</li>
+						<li name="n">2</li>
+						<li name="n">3</li>
+						<li name="n">4</li>
+						<li name="n">5</li>
+					  </ul>
+					 </div>
+				</div>
+				<div class="rbsp">
+					<div class="rb1">热播视频</div>
+					<div class="info1">
+						<a href="3.html?a" data-ajax="false">
+						<img src="img/bing.png"/></a>
+						<div class="info" id="f1"></div>
+					</div>
+					<div class="info2">
+						<a href="3.html?b" data-ajax="false">
+						<img src="img/lan.png"/></a>
+						<div class="info"  id="f2"></div>
+					</div>
+				</div>
+				<div class="rqbd">
+					<div class="rb2">人气榜单</div>
+					<div class="info3">
+						<a href="3.html?c" data-ajax="false">
+							<img src="img/tian.png"/></a>
+						<div class="info" id="f3"></div>
+					</div>
+					<div class="info4">
+						<a href="3.html?d" data-ajax="false">
+							<img src="img/jian.png"/></a>
+						<div class="info" id="f4"></div>
+					</div>
+				</div>
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#" data-icon="home" data-iconpos="top" data-role="button" class="ui-btn-active ui-btn-persist"><span class="u">首页</span></a></li>
+						<li><a href="#" data-icon="grid" data-iconpos="top" data-role="button" onclick="tz3()"><span class="u">频道</span></a></li>
+						<li><a href="#" data-icon="info" data-iconpos="top" data-role="button" onclick="tz4()"><span class="u">我的</span></a></li>
+					</ul>
+				</div>	
+			</div>
+	   </div>
+	</body>
+	<script>
+		var sz="冰川兰亭序天亮了剑网3";
+		var storage=localStorage;
+		storage.setItem("message",sz);
+		var val=storage.getItem("message");
+		var data1=$("#f1");
+		var data2=$("#f2");
+		var data3=$("#f3");
+		var data4=$("#f4");
+		data1.html(val.substr(0,2));
+		data2.html(val.substr(2,3));
+		data3.html(val.substr(5,3));
+		data4.html(val.substr(8,3));
+	</script>
+</html>
