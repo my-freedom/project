@@ -1,0 +1,12 @@
+{"total":31,"rows":[
+	{"tid":"1","proname":"书籍库存登记系统","xmjj":"BRS"},
+	{"tid":"2","proname":"客户信息管理软件","xmjj":"CMS"},
+	{"tid":"3","proname":"开发团队人员调度软件","xmjj":"DTS"},
+	{"tid":"4","proname":"天天美食休闲软件","xmjj":"DDF"},
+	{"tid":"5","proname":"快捷短信工具软件","xmjj":"SMS"},
+	{"tid":"6","proname":"电子商务平台","xmjj":"EBP"},
+	{"tid":"7","proname":"家庭收支记账软件","xmjj":"FAS"},
+	{"tid":"8","proname":"客户信息管理软件","xmjj":"CMS"},
+	{"tid":"9","proname":"电信网络学院","xmjj":"TNA"},
+	{"tid":"10","proname":"客户信息管理电子商务平台","xmjj":"CMS-2"}
+]}

@@ -1,0 +1,12 @@
+{"total":11,"rows":[
+	{"oid":"1","desc":"嘻哈包袱铺西直门剧场","committime":"2013-04-30 20:00","amount":"300","username":"张无忌","name":"zhangwuji","idcard":"110201158308290019"},
+	{"oid":"2","desc":"爆笑青春怀旧话剧《曾经》","committime":"2013-04-21 19:30","amount":"350","username":"韦小宝","name":"weixiaobao","idcard":"120101198708230019"},
+	{"oid":"3","desc":"中国国家芭蕾舞团交响乐团音乐会场","committime":"2013-05-3 20:30","amount":"1200","username":"杨过","name":"yanguo","idcard":"210101198778430019"},
+	{"oid":"4","desc":"嘻哈包袱铺西直门剧场","committime":"2013-04-29 20:00","amount":"300","username":"小龙女","name":"xiaolongnu","idcard":"310101691708220019"},
+	{"oid":"5","desc":"爆笑青春怀旧话剧《曾经》","committime":"2013-04-29 19:30","amount":"350","username":"段誉","name":"duanyu","idcard":"410101992708230019"},
+	{"oid":"6","desc":"中国国家芭蕾舞团交响乐团音乐会场","committime":"2013-04-29 20:30","amount":"1200","username":"令狐冲","name":"linghuchong","idcard":"150101198708230019"},
+	{"oid":"7","desc":"嘻哈包袱铺西直门剧场","committime":"2013-04-28 20:00","amount":"300","username":"任我行","name":"renwoxing","idcard":"190101198705296019"},
+	{"oid":"8","desc":"爆笑青春怀旧话剧《曾经》","committime":"2013-04-28 19:30","amount":"350","username":"张三丰","name":"zhangsanfen","idcard":"100401198708230019"},
+	{"oid":"9","desc":"中国国家芭蕾舞团交响乐团音乐会场","committime":"2013-04-28 20:30","amount":"1200","username":"周芷若","name":"zhuoziruo","idcard":"120931598708230019"},
+	{"oid":"10","desc":"嘻哈包袱铺西直门剧场","committime":"2013-04-27 20:00","amount":"300","username":"赵敏","name":"zhaomin","idcard":"110405168708290019"}
+]}
