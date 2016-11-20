@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>教师主页</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/teacher.css" type="text/css"/>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+  <div class="logo">
+        <div id="logo_1"><img src="images/logo.png"><h1>用户中心</h1>
+        </div>
+        <div class="logo_2">
+            <span class="glyphicon glyphicon-user">欢迎你</span>
+            <span class="glyphicon glyphicon-off">注销</span>
+        </div>
+  </div>
+  <div class="top" id="top">
+      <ul>
+        <li class="asterisk"><a href="#" class="glyphicon glyphicon-asterisk" onclick="change('center',this)">个人中心</a>
+        </li>
+        <li><a href="#" class="glyphicon glyphicon-envelope" onclick="change('envelope',this)">消息</a></li>
+      </ul>
+  </div>
+  <div class="teacherfunction">
+    <div class="left">
+    <ul id="mytab" class="nav nav-tabs" role="tablist">
+    <li class="active">
+       <a class="glyphicon glyphicon-cog" onclick="change('center',this)">个人设置</a></li>
+    <li>    
+       <a class="glyphicon glyphicon-th-list" onclick="change('list',this)">我的订单</a></li>
+    <li>  
+       <a class="glyphicon glyphicon-tasks" onclick="change('lesson',this)">我的课程</a></li>
+    <li> 
+       <a class="glyphicon glyphicon-usd" onclick="change('money',this)">我的钱包</a></li>
+    </ul>
+    </div>
+    <div class="right1" id="mytabcontent" class="tab-content">
+         <div  id="center">
+              <h3>设置资料</h3><hr/>
+              <form>
+               <div class="name">姓名 ：<input type="text" name="realname" value="" class="w" placeholder="请填写真实姓名" datatype="*"></div>
+              <div class="name">性别 ：<label><input type="radio" value="1" name="sex"  /> 男 </label><label><input type="radio" value="2" name="sex"  /> 女 </label></div>
+              <div class="name">年级 ：<select name="grade_id"><option value="">请选择</option><option value="77" >小学一年级</option><option value="78" >小学二年级</option><option value="79" >小学三年级</option><option value="80" >小学四年级</option><option value="81" >小学五年级</option><option value="82" >小学六年级</option><option value="83" >初中一年级</option><option value="84" >初中二年级</option><option value="85" >初中三年级</option><option value="86" >高中一年级</option><option value="87" >高中二年级</option><option value="88" >高中三年级</option></select></div>
+              <div class="name">辅导科目 ：<input type="text" name="subject_name" value="" class="w" placeholder="请填写辅导科目，如：数学" datatype="*"></div>
+              <div class="name">城市 ：<select name="city_id" class="city_id"><option value="52" >北京</option><option value="60" >厦门</option><option value="167" >哈尔滨</option><option value="180" >武汉</option><option value="220" >南京</option><option value="245" >大连</option><option value="321" >上海</option><option value="383" >杭州</option></select></div>
+              <div class="name">上课地址 ：<input type="text" name="address" value="" class="w2" placeholder="请填写上课地址，如：知春路56号1单元" datatype="*"></div>
+              <div class="name">可接受价格 ：<input type="text" name="min_price" value="0.00" class="w1" placeholder="" datatype="*"> -<input type="text" name="max_price" value="0.00" class="w1" placeholder="" datatype="*"></div>
+            <div class="submit-mod"><input class="btn" type="submit" value="保存"></div></form>
+         </div>
+         <div id="list">
+              <h3>我的订单</h3><hr/>
+              <div class="content1"></div>
+         </div>
+         <div id="lesson">
+              <h3>我的课程</h3><hr/>
+              <div class="content2"></div>
+         </div>
+         <div id="money">
+              <h3>我的钱包</h3><hr/>
+              <div class="content3"></div>
+         </div>
+         <div id="envelope">
+              <h3>我的消息</h3><hr/>
+              <div class="content4">4</div>
+         </div>
+   </div>
+   
+   <script src='js/bootstrap.min.js'></script>
+
+  <script src="js/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+<script src='js/bootstrap.js'></script>
+  <script src='js/teacher.js'>
+  </script>
+</body>
+</html>

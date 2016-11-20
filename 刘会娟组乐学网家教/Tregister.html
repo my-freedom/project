@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>乐学网注册界面</title>
+  <link rel="stylesheet" href="css/register.css" />
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/register.js"></script>
+  <style type="text/css">
+	.passwordErea1 .Cimg,.passwordErea1 .Eimg{
+		left:528px;
+	}
+	div.passwordErea1 .judge{
+		left:550px;
+	}
+  </style>
+ </head>
+ <body>
+	<div class="box">
+		<div class="title">
+			<a href="#">
+				<img src="images/logo.png" alt="" height="130"/>
+			</a>
+			<span></span>
+		</div>
+		<div class="register">
+		<form action="inforfulfil.html">
+			<div class="userErea">
+				<label for="user">用户名：</label>
+				<input type="text" class="txt" id="user" name="user" placeholder="用户名" regex="^\w{2,16}$" />
+				<i class="judge" style="display:none;">请填写6到16位字符！</i>
+			</div>
+			<div class="phoneErea">
+				<label for="phone">手机号：</label>
+				<input type="text" class="txt" id="phone" name="phone" placeholder="手机号" regex="^1[345678]\d{9}$" />
+			</div>
+			<div class="emailErea" style="padding-left:10px;">
+				<label for="email">Email：</label>
+				<input type="text" class="txt" id="email" name="email" placeholder="email" regex="^\w+@[0-9a-zA-Z]{2,}(\.[a-zA-Z]{2,}){1,2}$" />
+			</div>
+			<div class="passwordErea" style="padding-left:17px;">
+				<label for="password">密码：</label>
+				 <input type="password" class="txt" id="password" name="password" placeholder="password" regex="^\w{6,16}$" />
+				<i class="judge" style="display:none;">请填写6到16位任意字符！</i>
+			</div>
+			<div class="passwordErea1" style="margin-left:-13px;">
+				<label for="password1">确认密码：</label>
+				 <input type="password" class="txt" id="password1" name="password" placeholder="password again" regex="^\w{6,16}$" />
+				<i class="judge" style="display:none;">请再一次输入</i>
+			</div>
+
+			<div class="rgsubmit">
+				<input type="submit" value="注册" />
+			</div>
+			<div class="regilogin">
+				<span>已有乐学网账号？</span>
+				<a href="login.html">马上登陆→</a>
+			</div>
+		</div>
+		</form>
+	</div>
+ </body>
+</html>

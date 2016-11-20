@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>乐学网注册界面</title>
+   <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/register.css" />
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/register.js"></script>
+
+   <style type="text/css">
+	.box label,span{
+		font-size:16px;
+		color:#646464;
+		font-weight:400;
+		font-family:"微软雅黑";
+	}
+	.infor{
+		height:710px;
+	}
+	.infor>div input{
+		display:inline;
+	}
+	.passwordErea1{
+		 margin-left:-13px;
+	}
+	.passwordErea1 .Cimg,.passwordErea1 .Eimg{
+		left:528px;
+	}
+	div.passwordErea1 .judge{
+		left:550px;
+	}
+	.infor>div .checkbox{display:inline;}
+	.cityErea{
+		padding-left:152px;
+	}
+	.clearboth{
+		clear:both;
+	}
+	.form-inline .form-group{
+		/* width:130px; */
+		margin-left:0px;
+		float:left;
+		
+	}
+	.form-inline .form-group .form-control{
+		width:135px;
+	}
+  </style>
+ </head>
+ <body>
+	<div class="box">
+		<div class="title">
+			<a href="#">
+				<img src="images/logo.png" alt="" height="130"/>
+			</a>
+			<span style="background:url('images/parent.png') no-repeat;"></span>
+		</div>
+		<div class="register">
+			<div class="userErea">
+				<label for="user">用户名：</label>
+				<input type="text" class="txt" id="user" name="user" placeholder="用户名" regex="^\w{2,16}$" />
+				<i class="judge" style="display:none;">请填写6到16位字符！</i>
+			</div>
+			<div class="phoneErea">
+				<label for="phone">手机号：</label>
+				<input type="text" class="txt" id="phone" name="phone" placeholder="手机号" regex="^1[345678]\d{9}$" />
+			</div>
+			<div class="emailErea" style="padding-left:10px;">
+				<label for="email">Email：</label>
+				<input type="text" class="txt" id="email" name="email" placeholder="email" regex="^\w+@[0-9a-zA-Z]{2,}(\.[a-zA-Z]{2,}){1,2}$" />
+			</div>
+			
+			<div class="cityErea" style="text-align:left; padding-bottom:40px;">
+				<form class="form-inline">
+					
+				 
+				  <div data-toggle="distpicker">
+				  
+				   <div class="clearboth">
+				   <span style="float:left;">城市：</span>
+					<div class="form-group">
+					  <label class="sr-only" for="province1">Province</label>
+					  <select class="form-control" id="province1"><option value="" data-code="">—— 省 ——</option><option value="北京市" data-code="110000" selected="">北京市</option><option value="天津市" data-code="120000">天津市</option><option value="河北省" data-code="130000">河北省</option><option value="山西省" data-code="140000">山西省</option><option value="内蒙古自治区" data-code="150000">内蒙古自治区</option><option value="辽宁省" data-code="210000">辽宁省</option><option value="吉林省" data-code="220000">吉林省</option><option value="黑龙江省" data-code="230000">黑龙江省</option><option value="上海市" data-code="310000">上海市</option><option value="江苏省" data-code="320000">江苏省</option><option value="浙江省" data-code="330000">浙江省</option><option value="安徽省" data-code="340000">安徽省</option><option value="福建省" data-code="350000">福建省</option><option value="江西省" data-code="360000">江西省</option><option value="山东省" data-code="370000">山东省</option><option value="河南省" data-code="410000">河南省</option><option value="湖北省" data-code="420000">湖北省</option><option value="湖南省" data-code="430000">湖南省</option><option value="广东省" data-code="440000">广东省</option><option value="广西壮族自治区" data-code="450000">广西壮族自治区</option><option value="海南省" data-code="460000">海南省</option><option value="重庆市" data-code="500000">重庆市</option><option value="四川省" data-code="510000">四川省</option><option value="贵州省" data-code="520000">贵州省</option><option value="云南省" data-code="530000">云南省</option><option value="西藏自治区" data-code="540000">西藏自治区</option><option value="陕西省" data-code="610000">陕西省</option><option value="甘肃省" data-code="620000">甘肃省</option><option value="青海省" data-code="630000">青海省</option><option value="宁夏回族自治区" data-code="640000">宁夏回族自治区</option><option value="新疆维吾尔自治区" data-code="650000">新疆维吾尔自治区</option><option value="台湾省" data-code="710000">台湾省</option><option value="香港特别行政区" data-code="810000">香港特别行政区</option><option value="澳门特别行政区" data-code="820000">澳门特别行政区</option></select>
+					</div>
+					<div class="form-group">
+					  <label class="sr-only" for="city1">City</label>
+					  <select class="form-control" id="city1"><option value="" data-code="">—— 市 ——</option><option value="北京市市辖区" data-code="110100" selected="">北京市市辖区</option></select>
+					</div>
+					<div class="form-group">
+					  <label class="sr-only" for="district1">District</label>
+					  <select class="form-control" id="district1"><option value="" data-code="">—— 区 ——</option><option value="东城区" data-code="110101" selected="">东城区</option><option value="西城区" data-code="110102">西城区</option><option value="朝阳区" data-code="110105">朝阳区</option><option value="丰台区" data-code="110106">丰台区</option><option value="石景山区" data-code="110107">石景山区</option><option value="海淀区" data-code="110108">海淀区</option><option value="门头沟区" data-code="110109">门头沟区</option><option value="房山区" data-code="110111">房山区</option><option value="通州区" data-code="110112">通州区</option><option value="顺义区" data-code="110113">顺义区</option><option value="昌平区" data-code="110114">昌平区</option><option value="大兴区" data-code="110115">大兴区</option><option value="怀柔区" data-code="110116">怀柔区</option><option value="平谷区" data-code="110117">平谷区</option><option value="密云区" data-code="110118">密云区</option><option value="延庆区" data-code="110119">延庆区</option></select>
+					</div>
+				  </div>
+				  </div>
+				</form>
+			</div>
+
+			<div class="passwordErea" style="padding-left:17px;">
+				<label for="password">密码：</label>
+				 <input type="password" class="txt" id="password" name="password" placeholder="password" regex="^\w{6,16}$" />
+				<i class="judge" style="display:none; ">请填写6到16位任意字符！</i>
+			</div>
+			<div class="passwordErea1" ">
+				<label for="password1">确认密码：</label>
+				 <input type="password" class="txt" id="password1" name="password" placeholder="password again" regex="^\w{6,16}$" />
+				<i class="judge" style="display:none">请再一次输入</i>
+			</div>
+
+			<div class="rgsubmit">
+				<input type="submit" value="注册" />
+			</div>
+			<div class="regilogin">
+				<span>已有乐学网账号？</span>
+				<a href="login.html">马上登陆→</a>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/distpicker.data.js"></script>
+    <script src="js/distpicker.js"></script>
+    <script src="js/main.js"></script>
+ </body>
+</html>
