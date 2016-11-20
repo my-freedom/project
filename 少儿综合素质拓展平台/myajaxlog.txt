@@ -1,0 +1,2 @@
+select pwd,user from b where email = '1047709222@qq.com'
+人教版

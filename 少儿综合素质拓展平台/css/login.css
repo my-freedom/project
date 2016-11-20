@@ -1,0 +1,240 @@
+*{
+	padding:0;
+	margin:0;
+}
+input,label,img{
+	vertical-align: middle;
+}
+body{
+	padding-top: 50px;
+	background:#BAE7BE;
+	/*background-position:-250px 0px;*/
+}
+.top{
+	width:100%;
+	height:40px;
+	background:black;
+	opacity: 0.6;
+	line-height: 40px;
+	color:white;
+	position: fixed;
+	z-index: 2;
+	top:0;
+	font-size: 14px;
+}
+.top a{
+	font-size: 14px;
+	color:white;
+	text-decoration: none;
+}
+.top span{
+	margin-left: 20px;
+}
+.top ul,li{
+	float:right;
+	list-style: none;
+}
+.top li{
+	margin-right:20px;
+}
+.right{
+	margin-left:auto;
+	margin-right:200px;
+	margin-top: 0px;
+	width:500px;
+	height:420px;
+	background:white;
+}
+.right_1{
+	margin-left:auto;
+	margin-right:200px;
+	padding-top: 100px;
+	width:500px;
+	height:420px;
+	background:white;
+}
+.back{
+	margin-top: 20px;
+	margin:0 auto;
+	padding-top: 20px;
+	width:900px;
+	height:750px;
+	background:url(../images/back1.png) no-repeat;
+	/*border-radius: 10px;
+	box-shadow:0px 1px 4px rgba(0,0,0,0.8)inset;
+	box-shadow: -5px 4px 5px #888888;*/
+}
+input:focus,textarea:focus{
+	outline:none;
+}
+.du{
+	margin:3px 0px 10px 0px;
+}
+.word{
+	margin-bottom:20px;
+}
+input,label{
+	vertical-align:middle;
+}
+form{
+	width:740px;
+	height:500px;
+	margin:100px auto;
+	padding-top: 20px;
+}
+form div{
+	overflow: hidden;
+	clear:both;
+}
+#right1{
+	padding-left: 30px;
+}
+
+form div label{
+	float:left;
+	clear:both;
+}
+form div label b{
+    font-weight: normal;
+    font-size: 12px;
+    color:#ccc;
+    visibility: hidden;
+
+}
+form div label .text{
+	width:152px;
+	height:26px;
+	padding:0 2px;
+	border:1px solid #ccc;
+}
+form div em{
+	display: inline-block;
+	font-size: 12px;
+	color:#fff;
+	text-align: center;
+	font-style: normal;
+	width:53px;
+	height:15px;
+	vertical-align: middle;
+	line-height: 15px;
+	background: #ffD099;
+}
+form div .active{
+	background: #ff6600
+}
+div span{
+	width:80px;
+	display: inline-block;
+	text-align: right;
+}
+.submitBtn{
+	width:135px;
+	height:36px;
+	color:#fff;
+	margin:20px 0px 0px 80px;
+	background:#c8c0fb;
+	border-radius: 5px;
+	font-size: 14px;
+}
+.msg{
+	line-height: 12px;
+	color:#999;
+	float:left;
+	margin-left:5px;
+	display:none;
+	font-size: 12px;
+}
+.msg i{
+	display:inline-block;
+	vertical-align: middle;
+	width:25px;
+	height:20px;
+}
+.right a{
+	text-decoration: none;
+	color:black;
+	margin-left: 40px;
+}
+#teacherlogin{
+	padding:10px 20px;
+	margin-left: 70px;
+}
+
+.rewrite2{
+	
+	margin-left: 70px;
+	margin-right:100px;
+}
+#rbutton1{
+	margin-left: 150px;
+}
+.du{
+	display: none;
+}
+#user2,#pwd3,#inputname1{
+	color:red;
+	font-size:10px;
+	width:300px;
+	padding-top: 10px;
+
+}
+#user4,#pwd5,#inputpwd111,#inputpwd11,#inputpwd1,#name3,#inputname,#email2,#inputemail,#email3{
+  width:300px;
+}
+#userr2,#inputpwdd3{
+  color:green;
+  float:right;
+  padding-top: 10px;
+}
+#user3,#pwd4,#pwd5,#name2,#email4,#num3{
+	color:green;
+	padding-top: 10px;
+
+}
+#inputuser,#inputpwd,#inputpwd1,#inputname1,#inputemail,#inputname{
+	padding-top: 10px;
+	color:red;
+}
+#user{
+   width:200px;
+}
+#yan{
+	padding-top: 30px;
+	color:red;
+}
+#smile{
+	margin-left: 30px;
+}
+#loginbutton{
+	margin-left: 10px;
+	width:100px;
+}
+#loginbutton1{
+	margin-left: 16px;
+}
+#inputpwdd2,#num4{
+  color:red;
+  float:right;
+  padding-top: 10px;
+}
+#fpwd{
+	color:silver;
+	float:right;
+	font-weight: bold;
+	font-family: 微软雅黑;
+	margin-top: 0px;
+	margin-left: 100px;
+
+}
+#inputuserr1{
+	color:red;
+	float:right;
+}
+#fast{
+	margin-top: 30px;
+	margin-left: 100px;
+}
+#divid{
+	margin-top: 10px;
+	margin-left: 10px;
+}

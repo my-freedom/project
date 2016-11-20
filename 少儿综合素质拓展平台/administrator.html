@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>教师主页</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="imagetoolbar" content="no" />
+<link rel="stylesheet" href="css/administrator.css" type="text/css"/>
+<script>
+ function change(val, obj){
+           obj.style.backgroundColor="#4c4c4c";
+            if (val=='right1') {
+                right1.style.display='block';
+                right2.style.display='none';
+            } else if(val=='right2'){
+                
+                right1.style.display='none';
+                right2.style.display='block';
+            } 
+       }
+
+       function change2(obj){
+         obj.style.backgroundColor="silver";
+       }
+</script>
+</head>
+<body>
+  <div class="logo">
+        <span class="logo_1">
+        <img src="images/homepage3.png"/><span>少儿综合素质拓展平台</span>
+        </span>
+        <span class="logo_2">
+        <li>收藏网站</li><li>设为首页</li><li>课程分类</li><li>注销</li>
+        </span>
+  </div>
+  <div class="teacherfunction">
+    <div class="left">
+    <ul>
+    <li onclick="change('right1',this)" onmouseout="change2(this)">管理普通用户</li>
+    <li onclick="change('right2',this)" onmouseout="change2(this)">管理老师用户</li>
+    </ul>
+    </div>
+    <div class="right1" id="right1">
+            <ul>
+                <li><a href="#">招生招生招生招生</a></li>
+            </ul>
+        </div>
+        <div class="right2" id="right2" style="display:none">
+            <ul>
+                <li><a href="#">热招热招热招热招</a></li>
+            </ul>
+        </div>
+  </div>
+</body>
+</html>

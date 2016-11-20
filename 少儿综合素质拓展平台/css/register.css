@@ -1,0 +1,140 @@
+*{
+	padding:0;
+	margin:0;
+}
+input,label,img{
+	vertical-align: middle;
+}
+body{
+	margin:0 auto;
+	background:url(../images/mainback.jpg);
+}
+.top{
+	width:100%;
+	height:40px;
+	background:black;
+	opacity: 0.6;
+	line-height: 40px;
+	color:white;
+	position: fixed;
+	z-index: 2;
+	top:0;
+	font-size: 14px;
+}
+.top a{
+	font-size: 14px;
+	color:white;
+	text-decoration: none;
+}
+.top span{
+	margin-left: 20px;
+}
+.top ul,li{
+	float:right;
+	list-style: none;
+}
+.top li{
+	margin-right:20px;
+}
+.right{
+	margin:0 auto;
+	width:740px;
+	height:450px;
+	padding-left:100px;
+	background:white;
+	border-radius: 10px;
+	box-shadow:0px 1px 4px rgba(0,0,0,0.8)inset;
+	box-shadow: -5px 4px 5px #888888;
+}
+input:focus,textarea:focus{
+	outline:none;
+}
+.du{
+	margin:3px 0px 10px 0px;
+}
+.word{
+	margin-bottom:20px;
+}
+input,label{
+	vertical-align:middle;
+}
+form{
+	width:740px;
+	height:500px;
+	margin:100px auto;
+	padding-top: 70px;
+}
+form div{
+	overflow: hidden;
+	clear:both;
+}
+form div label{
+	float:left;
+	clear:both;
+}
+form div label b{
+    font-weight: normal;
+    font-size: 12px;
+    color:#ccc;
+    visibility: hidden;
+
+}
+form div label .text{
+	width:152px;
+	height:26px;
+	padding:0 2px;
+	border:1px solid #ccc;
+}
+form div em{
+	display: inline-block;
+	font-size: 12px;
+	color:#fff;
+	text-align: center;
+	font-style: normal;
+	width:53px;
+	height:15px;
+	vertical-align: middle;
+	line-height: 15px;
+	background: #ffD099;
+}
+form div .active{
+	background: #ff6600
+}
+div span{
+	width:80px;
+	display: inline-block;
+	text-align: right;
+}
+.submitBtn{
+	width:135px;
+	height:36px;
+	color:#fff;
+	margin:20px 0px 0px 80px;
+	background:#c8c0fb;
+	border-radius: 5px;
+	font-size: 14px;
+}
+.msg{
+	line-height: 12px;
+	color:#999;
+	float:left;
+	margin-left:5px;
+	display:none;
+	font-size: 12px;
+}
+.msg i{
+	display:inline-block;
+	vertical-align: middle;
+	width:25px;
+	height:20px;
+}
+
+
+
+
+
+
+
+
+
+

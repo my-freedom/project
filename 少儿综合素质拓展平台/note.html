@@ -1,0 +1,96 @@
+﻿<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>笔记</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="imagetoolbar" content="no" />
+  <link rel="stylesheet" href="css/note.css" type="text/css"/>
+  <script>
+   function openNew(){
+  //获取页面的高度和宽度
+  var sWidth=document.body.scrollWidth;
+  var sHeight=document.body.scrollHeight;
+  
+  //获取页面的可视区域高度和宽度
+  var wHeight=document.documentElement.clientHeight;
+  
+  var oMask=document.createElement("div");
+    oMask.id="mask";
+    oMask.style.height=sHeight+"px";
+    oMask.style.width=sWidth+"px";
+    document.body.appendChild(oMask);
+  var oLogin=document.createElement("div");
+    oLogin.id="login";
+    oLogin.innerHTML="<div class='loginCon'><div class='sider5'><from ><h3>我的笔记：</h3><textarea rows='7' cols='70'></textarea></br><input class='quxiao' type='reset' value='取消'/><button class='xiugai' hidefocus='true'>确定</button></from></div><div id='close'>点击关闭</div></div>";
+    document.body.appendChild(oLogin);
+  
+  //获取登陆框的宽和高
+  var dHeight=oLogin.offsetHeight;
+  var dWidth=oLogin.offsetWidth;
+    //设置登陆框的left和top
+    oLogin.style.left=sWidth/2-dWidth/2+"px";
+    oLogin.style.top=wHeight/2-dHeight/2+"px";
+  //点击关闭按钮
+  var oClose=document.getElementById("close");
+  
+    //点击登陆框以外的区域也可以关闭登陆框
+    oClose.onclick=oMask.onclick=function(){
+          document.body.removeChild(oLogin);
+          document.body.removeChild(oMask);
+          };
+          };
+          
+  window.onload=function(){
+      var oBtn=document.getElementById("btnLogin1");
+        //点击登录按钮
+        oBtn.onclick=function(){
+          openNew();
+          return false;
+          }
+        
+    }
+
+</script>
+  </head>
+  <body>
+  <div id="mask"></div>
+  <div class="top">
+  <ul>
+   <li class="cat-1"><img src="images/ren.png"><a href="student.php">首页</a></li>
+  <li class="cat-2"><img src="images/fangzi.png"><a href="learningcenter.php">学习中心</a></li>
+  <li class="cat-3"><img src="images/lu.png"><a href="#">个人中心</a></li>
+  <li class="cat-4"><img src="images/shipin.png"><a href="list.html">排行榜</a></li>
+  <li class="cat-5"><img src="images/yingyong.png"><a href="#">视频中心</a></li>
+  <li class="cat-7"><img src="images/yinyue.png"><a href="#">课外乐园</a></li>
+	</ul>
+  </div>
+  <div class="main">
+      <div class="sider1">
+          <input type="file" name="file" accept="image/gif, image/jpeg"/> 
+      </div>
+      <div class="sider2">
+        <ul>
+        <li><a href="my.php">个人资料</a></li>
+	    <li><a href="seculity.html">账号安全</a></li>
+	    <li><a href="xiangce.php" target="mainiframe">相册</a>&nbsp;</li>
+	    <li><a href="note.html">课堂笔记</a></li>
+      <li><a href="friends.php">好友</a></li>
+	    <li><a href="liuyan.php">留言板</a></li>
+	    </ul>
+      </div>
+      <div class="sider3">
+      <h3>个性签名:</h3>
+       <p contentEditable="true">在此留下你的签名，嘿嘿</p>
+      </div>
+      <div class="sider4">
+        <div class="sider4-1">
+           <span></span>笔记
+           <li class="scure">笔记内容</li>
+           <button id="btnLogin1" hidefocus="true" class="login-btn">编辑</button> 
+           <button id="btnLogin2" hidefocus="true" class="login-btn">删除</button>
+         </div>
+	    </div>
+  </div>
+  </body>
+</html>

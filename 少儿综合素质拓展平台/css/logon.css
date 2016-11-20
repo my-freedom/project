@@ -1,0 +1,111 @@
+body{
+	margin:0 auto;
+	/*text-align:center;*/
+}
+.logo_1{
+	padding-top:200px;
+	padding-left:50px;
+	padding-right:300px;
+	padding-bottom:0px;
+	color:#6495ed;
+	font-size:20px;
+	font-weight:bold;
+}
+.logo_2{
+	padding-top:10px;
+	padding-right:0px;
+	float:right;
+	color:#6495ed;
+	font-size:15px;
+	font-weight:bold;
+}
+.logo{
+	width:1000px;
+	height:80px;
+/*	background:url(images/homepage1.png);*/
+}
+.function{
+	margin-top:0px;
+}
+.main_1{
+	padding-top:20px;
+	margin:0 auto;
+	width:1000px;
+	height:400px;
+	background:url(images/homepage2.png);
+	/*background-color:red;*/
+}
+.main_2{
+	margin:0 auto;
+	width:1000px;
+	height:100px;
+	margin-top:250px;
+	
+}
+.connect{
+	float:right;
+}
+.function_1{
+	font-size:15px;
+	background:url(images/homepage7.png);
+	padding-left:10px;
+	margin-left:60px;
+	padding-bottom:0px;
+	width:170px;
+	height:450px;
+	/*background-color:yellow;*/
+	padding-top:100px;
+	float:left;
+}
+.function_1 a{
+	font-size:15px;
+	color:black;
+	text-decoration:none;
+	border-radius:13px;
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-left:6px;
+	padding-right:6px;
+}
+.function_1 a:hover{
+	background:white;
+}	 
+#teacherlogin{
+	border-radius:10px;
+	height:30px;
+	width:155px;
+	background-color:white;
+}
+.function_1 ul{
+	list-style:none;
+	/*list-style-image:url();*/
+}
+.function_1 h3{
+	text-align:center;
+}
+.function_2{
+	width:320px;
+	height:180px;
+	float:left;
+	margin-left:60px;
+	background-color:#FFF0F5;
+	margin-top:330px;
+	color:#696969;
+}
+.function_2 ul{
+	font-size:17px;
+	line-height:1.5em;
+}
+.function_3 ul{
+   font-size:17px;
+   line-height:1.5em;
+}
+.function_3{
+	width:320px;
+	height:180px;
+	float:left;
+	margin-left:45px;
+	background-color:#FFF0F5;
+	margin-top:330px;
+	color:#696969;
+}

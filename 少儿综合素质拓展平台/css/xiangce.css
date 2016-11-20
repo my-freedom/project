@@ -1,0 +1,266 @@
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	margin:0 auto;
+	background:url(images/mainback.jpg);
+}
+#close{ 
+	background:url(images/close.png) no-repeat; 
+	width:30px; 
+	height:30px; 
+	cursor:pointer; 
+	position:absolute; 
+	right:5px; 
+	top:15px; 
+	text-indent:-999em;
+	}
+#mask{ 
+	background-color:#ccc;
+	opacity:0.5;
+	filter: alpha(opacity=50); 
+	position:absolute; 
+	left:0;
+	top:0;
+	z-index:1000;
+	}
+#login{ 
+	position:fixed;
+	z-index:1001;
+	}
+.loginCon{ 
+	position:relative; 
+	width:670px;
+	height:380px;
+	background:url(images/loginBg.png) #2A2C2E center center no-repeat;
+	color:#ffffff;
+	}
+.login-btn{
+	width:100px;
+	height:50px;
+	font-size: 20px;
+	background:#e6e6fa;
+	border-radius: 5px;
+}
+.top{
+	width:100%;
+	margin:0 auto;
+	text-align:center;
+	background:black;
+	font-size:20px;
+	padding-top: 10px;
+	padding-bottom: 0px;
+	position:fixed;
+	z-index: 2;
+}
+.top>ul{
+	width:750px;
+	margin: 0 auto;
+	text-align: center;
+}
+.top ul >li{
+	margin-left:20px;
+	float:left;
+}
+.top ul li a{
+	color:#ffffff;
+	text-decoration:none;
+	text-align: center;
+}
+.top img{
+	background:black;
+	width:30px;
+	height:30px;
+}
+.main{
+	top:43px;
+	height:1000px;
+	position:relative;
+	z-index: 1;
+	margin:0 auto;
+	width:1100px;
+}
+.sider1{
+	position:absolute;
+	top:30px;
+	padding-top:40px;
+	padding-left:0px;
+	background:url(images/1.jpg);
+	padding-bottom: 40px;
+	width:140px;
+	height:60px;
+	border-radius: 180px;
+}
+.sider2{
+	position:absolute;
+	top:200px;
+	padding-top:30px;
+	padding-left: 60px;
+	padding-right: 20px;
+	width:140px;
+	height:300px;
+	font-size: 20px;
+	background:url(images/mu.jpg);
+	border-radius: 20px;
+}
+.sider2 li{
+	list-style: none;
+	line-height:1.8em;
+}
+.sider2 li a{
+	text-decoration:none;
+	color:#000000;
+	font-weight: bold;
+}
+.sider3{
+	position:absolute;
+	top:30px;
+	left:200px;
+	padding:40px;
+	padding-left:90px;
+	/*background:white;*/
+	width:700px;
+}
+.sider h3{
+	float:left;
+}
+.sider3 img{
+	float:left;
+}
+.sider4{
+	width:740px;
+	height:600px;
+	border-radius: 20px;
+	position:absolute;
+	top:150px;
+	left:209px;
+	padding-top:150px;
+	padding-left: 150px;
+	background:url(images/tu.jpg);
+}
+
+.btn-slide{
+	display: black;
+	background: #e6e6fa;
+	padding:10px;
+	border-right:1px solid gray;
+	text-decoration: none;
+	color:black;
+	font-size: 18px;
+}
+
+.sider4 #hpn{
+	width:480px;
+	height:330px;
+	padding-top:64px;
+	padding-left:63px;
+	background:url(images/xi.png);
+    margin-top:10px;
+    border-radius: 10px;
+    position: absolute;
+}
+.xi{
+	position: absolute;
+	top:200px;
+	right:100px;
+}
+.sub1{
+	position: absolute;
+	bottom:120px;
+	right:135px;
+	width:50px;
+	height:35px;
+	background:#e6e6fa;
+	border-radius: 10px;
+}
+.sub2{
+	border-radius: 10px;
+	position: absolute;
+	bottom:120px;
+	right:75px;
+	width:50px;
+	height:35px;
+	background:#e6e6fa;
+}
+.sider4 #hpn1{
+	width:450px;
+	height:320px;
+	padding-top:80px;
+	padding-left:80px;
+	background:url(images/xi.png);
+    margin-top:10px;
+    border-radius: 10px;
+    position: absolute;
+    line-height: 30px;
+    font-size: 18px;
+}
+
+.setAlbum{
+	margin-top: 50px;
+	width:150px;
+	height:145px;
+	float:left;
+	margin-right: 10px;
+}
+.setAlbum1{
+	background: url(../images/xianshi.jpg) no-repeat;
+	width:150px;
+	height:120px;
+	
+}
+.setAlbum1 img{
+	width:123px;
+	height:90px;
+	padding-left: 15px;
+	padding-top: 14px;
+}
+.setAlbum2 .as{
+	text-align: center;
+	height:20px;
+	width:110px;
+	display:block;
+	overflow: hidden;
+	float:left;
+}
+.setAlbum2{
+	float:left;
+
+}
+.setAlbum2 a{
+	cursor: pointer;
+	color:gray;
+	text-decoration: none;
+}
+.btn{
+	float:left;
+	display: block;
+	
+}
+#str{
+	float:right;
+	list-style:none;
+	position: relative;
+}
+.setAlbum2 ul{
+	border:2px solid silver;
+    padding:0 8px;
+    color:gray;
+    list-style: none;
+	cursor: pointer;
+	float:right;
+	position: absolute;
+	margin-top:25px;
+	margin-left: -30px;
+
+}
+/*.setAlbum2 ul{
+	list-style: none;
+
+}*/
+.setAlbum2 li a:hover{
+	background:pink ;
+
+}
+
+
