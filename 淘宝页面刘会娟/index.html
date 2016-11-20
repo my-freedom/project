@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="css/index.css" />
+	</head>
+	<body onload="show()"><!--本地存储、css3响应式布局、图片轮播、楼梯导航-->
+		<header>
+			<div class="top">
+				<div class="top1">
+					<span class="login"><a href="#">亲，请登录</a></span>
+					<span><a href="#">免费注册</a></span>
+					<span><a href="#">手机逛淘宝</a></span>
+				</div>
+				<div class="top2">
+					<ul>
+						<li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)">
+							<a href="#">我的淘宝</a>
+							<ul>
+								<li>我的淘宝</li>
+								<li>我的淘宝</li>
+								<li>我的淘宝</li>
+							</ul>
+						</li>
+						<li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)">
+							<a href="#">购物车</a>
+							<ul>
+								<li>购物车</li>
+								<li>购物车</li>
+								<li>购物车</li>
+							</ul>
+						</li>
+						<li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)">
+							<a href="#">收藏夹</a>
+							<ul>
+								<li>收藏夹</li>
+								<li>收藏夹</li>
+								<li>收藏夹</li>
+							</ul>
+						</li>
+						<li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)">
+							<a href="#">卖家中心</a>
+							<ul>
+								<li>卖家中心</li>
+								<li>卖家中心</li>
+								<li>卖家中心</li>
+							</ul>
+						</li>
+						<li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)">
+							<a href="#">商品分类</a>
+							<ul>
+								<li>商品分类</li>
+								<li>商品分类</li>
+								<li>商品分类</li>
+							</ul>
+						</li>
+						<li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)">
+							<a href="#">联系客服</a>
+							<ul>
+								<li>联系客服</li>
+								<li>联系客服</li>
+								<li>联系客服</li>
+							</ul>
+						</li>
+						<!--<li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)">
+							<a href="#">网上导航</a>
+							<ul>
+								<li>网上导航</li>
+								<li>网上导航</li>
+								<li>网上导航</li>
+							</ul>
+						</li>-->
+					</ul>
+				</div>
+			</div>
+		</header>
+		<div class="main">
+		  <nav>
+		  	<div class="logo"><img src="img/logo.jpg"></div>
+		  	<div class="search">
+		  		<ul>
+		  			<li class="active" id="btn1" onclick="changenav('info1',this)">淘宝</li>
+		  			<li  id="btn2" onclick="changenav('info1_1',this)">天猫</li>
+		  			<li  id="btn3" onclick="changenav('info1_2',this)">店铺</li>
+		  		</ul>
+		  		<form>
+		  			<input type="text" id="msg" class="search-text" name="q"/>
+                    <input type="button" onclick="savedata()" name="save" class="search-button" value="保存"/>
+		  		</form>
+		  		<div id="info1" >
+		  			<ul >
+		  				<li>新款连衣裙</li>
+		  				<li>四件套</li>
+		  				<li>潮流T恤</li>
+		  				<li>时尚女鞋</li>
+		  				<li>短裤</li>
+		  				<li>半身裙</li>
+		  				<li>男士外套</li>
+		  				<li>墙纸</li>
+		  				<li>行车记录仪</li>
+		  				<li>新款男鞋</li>
+		  				<li>耳机</li>
+		  				<!--<li>苏宁易购</li>-->
+		  			</ul>
+		  		</div>
+		  		<div id="info1_1">
+		  			<ul >
+		  				<li>天猫</li>
+		  				<li>天猫</li>
+		  				<li>天猫</li>
+		  				<li>天猫</li>
+		  				<li>天猫</li>
+		  				<li>天猫</li>
+		  		        <li>天猫</li>
+		  			</ul>
+		  		</div>
+		  		<div id="info1_2">
+		  			<ul >
+		  				<li>新款连衣裙</li>
+		  				<li>四件套</li>
+		  				<li>潮流T恤</li>
+		  				<li>时尚女鞋</li>
+		  				<li>短裤</li>
+		  				<li>半身裙</li>
+		  				<li>男士外套</li>
+		  				<li>墙纸</li>
+		  				<li>行车记录仪</li>
+		  				<li>新款男鞋</li>
+		  			
+		  				<!--<li>苏宁易购</li>-->
+		  			</ul>
+		  		</div>
+		  		<div class="nav1">
+		  			<ul>
+		  				<li>天猫</li>
+		  				<li>聚划算</li>
+		  				<li>天猫超市</li>
+		  				<li>淘抢购</li>
+		  				<li>电器城</li>
+		  				<li>司法拍卖</li>
+		  				<li>中国制造</li>
+		  				<li>特色中国</li>
+		  				<li>阿里旅行</li>
+		  				<li>司法拍卖</li>
+		  				<li>智能生活</li>
+		  				<!--<li>苏宁易购</li>-->
+		  			</ul>
+		  		</div>
+		  	</div>
+		  	<div class="erweima"  id="erweima">
+		  		<span class="close" onclick="closebtn()">X</span>
+		  		<span class="p1">手机淘宝</span>
+		  		<img src="img/1.png">
+		    </div>
+		  </nav>
+		  <div class="aside">
+		  	<div class="aside1">
+		  		<h3>主题市场</h3>
+		  		<ul>
+		  			<li id="o1">女装/  男装/  内衣<span>&gt;</span></li>
+		  			<li id="o2">鞋靴/  箱包/  配件<span>&gt;</span>
+		  			<li id="o3">童装玩具/  孕产/  用品<span>&gt;</span></li>
+		  			<li>家电/  数码/  手机<span>&gt;</span></li>
+		  			<li>美妆/  护肤/  保健品<span>&gt;</span></li>
+		  			<li>珠宝/  眼镜/  手表<span>&gt;</span></li>
+		  			<li>运动/  户外/  乐器<span>&gt;</span></li>
+		  			<li>游戏/  动漫/  影视<span>&gt;</span></li>
+		  			<li>美食/  生鲜/  零食<span>&gt;</span></li>
+		  			<li>汽车/  二手车/  用品<span>&gt;</span></li>
+		  			<li>鲜花/  零食/  农资<span>&gt;</span></li>
+		  			<li>百货/  收纳/  家庭保健<span>&gt;</span></li>
+		  			<li>学习/  卡券/  本地服务<span>&gt;</span></li>
+		  		</ul>
+		  		<img src="img/xia.jpg">
+		  		<div id="one">1</div>
+		  		<div id="tow">2</div>
+		  		<div id="three">3</div>
+		  	</div>
+		  	<div class="aside2">
+		  		<div class="pic">
+	               <ul>
+	       	          <li name="new" onclick="#"></li>
+	       	          <li name="new" onclick="#"></li>
+	       	          <li name="new" onclick="#"></li>
+	       	          <li name="new" onclick="#"></li>
+	       	          <li name="new" onclick="#"></li>
+	               </ul>
+		           <img id="images" src="img/banner-1.jpg">
+		        </div>
+		        <div class="pic1">
+		        	<h6><img src="img/anmin.gif">天猫必逛热门品牌，天天上天猫</h6>
+		        	<div class="ad1" id="ad1">
+		        		<div id="content">
+		  			        <div id="imgs">
+		  				      <img id="images" src="img/190x110-1.jpg">
+		        	          <img id="images" src="img/190x110-2.jpg">
+		        	          <img id="images" src="img/190x110-3.jpg">
+		        	          <img id="images" src="img/190x110-4.jpg">
+		        	          <img id="images" src="img/190x110-5.jpg">
+		        	          <img id="images" src="img/190x110-6.jpg">
+		        	          <img id="images" src="img/190x110-7.jpg">
+		        	          <img id="images" src="img/190x110-8.jpg">
+		        	        
+		        	          <img id="images" src="img/190x110-10.jpg">
+		        	          <img id="images" src="img/190x110-11.jpg">
+		        	          <img id="images" src="img/190x110-12.jpg">
+		        	          <img id="images" src="img/190x110-13.jpg">
+		        	          <img id="images" src="img/190x110-14.jpg">
+		        	          <img id="images" src="img/190x110-15.jpg">
+		        	          <img id="images" src="img/190x110-16.jpg">
+		        	          <img id="images" src="img/190x110-17.jpg">
+		        	          <img id="images" src="img/190x110-18.jpg">
+		        	         
+		        	          <img id="images" src="img/190x110-20.jpg">
+		  			        </div>
+		  		            <div id="reps"></div>
+		  		        </div>
+		        	</div>
+		        </div>
+		  	</div>
+		  	<div class="aside3">
+		  		        <img src="img/160x280-1.jpg">
+		  		        <img src="img/160x200-1.jpg">
+		  		</div>
+		  	<div class="aside4">
+		  		<div class="userimg">
+		  			<img src="img/baby.jpg">
+		  			<p>Hi!你好</p>
+		  			<p><span>领淘金币抵钱</span>或去<span>会员俱乐部</span></p>
+		  			<div class="btn">
+		  			<input type="button" value="登录">
+		  			<input type="button" value="注册">
+		  			<input type="button" value="开店">
+		  			</div>
+		  		</div>
+		  		<div class="tab">
+		  			<ul>
+		  				<li class="active1" onmouseover="change('gg',this)" onmouseout="change2(this)">公告</li>
+		  				<li onmouseover="change('gz',this)" onmouseout="change2(this)">规则</li>
+		  				<li onmouseover="change('lt',this)" onmouseout="change2(this)">论坛</li>
+		  				<li onmouseover="change('gy',this)" onmouseout="change2(this)">公益</li>
+		  				<li onmouseover="change('aq',this)" onmouseout="change2(this)">安全</li>
+		  			</ul>
+		  			<div class="ad2" id="gg">
+		  				<div>淘宝造物节7月21日启动，72小时线上</div>
+		  				<div>阿里首届权利人共创会，淘宝头条启动</div>
+		  			</div>
+		  			<div class="ad2" id="gz">
+		  				2
+		  			</div>
+		  			<div class="ad2" id="lt">
+		  				3
+		  			</div>
+		  			<div class="ad2" id="gy">
+		  				4
+		  			</div>
+		  			<div class="ad2" id="aq">
+		  				5
+		  			</div>
+		  		</div>
+		  		<table cellpadding="0" cellspacing="0">
+		  			<tr><td><div></div>充话费</td>
+		  				<td><div></div>游戏</td>
+		  				<td><div></div>旅行</td>
+		  				<td><div></div>保险</td>
+		  			</tr>
+		  			<tr><td><div></div>彩票</td>
+		  				<td><div></div>电影</td>
+		  				<td><div></div>点外卖</td>
+		  				<td><div></div>理财</td>
+		  			</tr>
+		  			<tr><td><div></div>找服务</td>
+		  				<td><div></div>音乐</td>
+		  				<td><div></div>水电煤</td>
+		  				<td><div></div>火车票</td></tr>
+		  		</table>
+		  		<div class="ad3">
+		  			<h6>阿里APP<span>更多</span></h6>
+		  			<table id="app">
+		  				<tr><td><img src="img/tao.jpg"></td>
+		  					<td><img src="img/zhi.jpg"></td>
+		  					<td><img src="img/qu.jpg"></td>
+		  					<td><img src="img/ju.jpg"></td>
+		  					<td><img src="img/yu.jpg"></td>
+		  				</tr>
+		  				<tr><td><img src="img/wang.jpg"></td>
+		  					<td><img src="img/mao.jpg"></td>
+		  					<td><img src="img/map.jpg"></td>
+		  					<td><img src="img/money.jpg"></td>
+		  					<td><img src="img/ding.jpg"></td>
+		  				</tr>
+		  			</table>
+		  		</div>
+		  	</div>
+		  	<div class="aside5">
+		  		<div class="r1">
+		  			<img src="img/60x60-11.jpg">
+		  			<div class="r_1">
+		  			<span class="ac1">帅气男友范</span>
+		  			<span class="ac2">又酷又性感</span>
+		  			<i><img src="img/fire.PNG">人气9150</i>
+		  			</div>
+		  		</div>
+		  		<div class="r2">
+		  			<img src="img/60x60-22.jpg">
+		  			<div class="r_2">
+		  			<span class="ac1">帅气男友范</span>
+		  			<span class="ac2">又酷又性感</span>
+		  			<i><img src="img/fire.PNG">人气9150</i>
+		  			</div>
+		  		</div>
+		  		<div class="r3">
+		  			<img src="img/60x60-33.jpg">
+		  			<div class="r_3">
+		  			<span class="ac1">帅气男友范</span>
+		  			<span class="ac2">又酷又性感</span>
+		  			<i><img src="img/fire.PNG">人气9150</i>
+		  			</div>
+		  		</div>
+		  		<div class="r4">
+		  			<img src="img/60x60-44.jpg">
+		  			<div class="r_4">
+		  			<span class="ac1">帅气男友范</span>
+		  			<span class="ac2">又酷又性感</span>
+		  			<i><img src="img/fire.PNG">人气9150</i>
+		  			</div>
+		  		</div>
+		  		<div class="r5">
+		  			<img src="img/60x60-55.jpg">
+		  			<div class="r_5">
+		  			<span class="ac1">帅气男友范</span>
+		  			<span class="ac2">又酷又性感</span>
+		  			<i><img src="img/fire.PNG">人气9150</i>
+		  			</div>
+		  		</div>
+		  	</div>
+		  	
+		  </div>
+		  <!--响应式布局-->
+		  <div class="mid" id="mid">
+		  <div class="main1" id="main1">
+		  	 <div class="aside6 ff" id="side6">
+		  	 	<div class="tit">
+		  	 	</div>
+		  	 	<!--<div class="tit1">更多
+		  	 	</div>-->
+		  	 	<div class="aside6left" id="aside6left">
+		  	 	   <div class="aside6left1">
+		  	 	   	  <div class="ad4">
+		  	 	   	  	<img src="img/of1-lf1.jpg">
+		  	 	   	  	<div class="remen">
+		  	 	   	  		<ul>
+		  	 	   	  			<li>热门TOP</li>
+		  	 	   	  			<li>夏装新款</li>
+		  	 	   	  			<li>连衣裙</li>
+		  	 	   	  			<li>春色单鞋</li>
+		  	 	   	  			<li>沙发</li>
+		  	 	   	  			<li>真皮女包</li>
+		  	 	   	  			<li>风衣</li>
+		  	 	   	  			<li>按摩靠垫</li>
+		  	 	   	  			<li>运动服</li>
+		  	 	   	  			<li>四件套</li>
+		  	 	   	  			<!--<li>行李箱</li>-->
+		  	 	   	  		</ul>
+		  	 	   	  	</div>
+		  	 	   	  </div>
+		  	 	   	  <div class="ad4_4">
+		  	 	   	  	<table cellpadding="0" cellspacing="0">
+		  	 	   	  		<tr><td><img src="img/of1-lf8.jpg" class="t7"></td>
+		  	 	   	  			<td rowspan="2"><img class="t1" src="img/of1-lf3.jpg"></td>
+		  	 	   	  			<td rowspan="2"><img class="t2" src="img/of1-lf4.jpg"></td>
+		  	 	   	  		</tr>
+		  	 	   	  		<tr><td><img src="img/of1-lf2.jpg" class="t3"></td>	
+		  	 	   	  		</tr>
+		  	 	   	  		<tr><td colspan="2" rowspan="2"><img src="img/of1-lf5.jpg" class="t4"></td>
+		  	 	   	  			<td><img src="img/of1-lf6.jpg" class="t5"></td>
+		  	 	   	  		</tr>
+		  	 	   	  		<tr><td><img src="img/of1-lf7.jpg" class="t6"></td>
+		  	 	   	  			
+		  	 	   	  		</tr>
+		  	 	   	  	</table>
+		  	 	   	  </div>
+		  	 	   </div>
+		  	 	   <div class="aside6left2">
+		  	 	   	 <div class="ad4">
+		  	 	   	  	<img src="img/of2-1.jpg">
+		  	 	   	  	<div class="remen" id="remen1">
+		  	 	   	  		<ul>
+		  	 	   	  			<li>热门TOP</li>
+		  	 	   	  			<li>夏装新款</li>
+		  	 	   	  			<li>连衣裙</li>
+		  	 	   	  			<li>春色单鞋</li>
+		  	 	   	  			<li>沙发</li>
+		  	 	   	  			<li>真皮女包</li>
+		  	 	   	  			<li>风衣</li>
+		  	 	   	  			<li>按摩靠垫</li>
+		  	 	   	  			<li>运动服</li>
+		  	 	   	  			<li>四件套</li>
+		  	 	   	  		<!--	<li>行李箱</li>-->
+		  	 	   	  		</ul>
+		  	 	   	  	</div>
+		  	 	   	  </div>
+		  	 	   	  <div class="ad4_4">
+		  	 	   	  	<table cellpadding="0" cellspacing="0">
+		  	 	   	  		<tr><td><img src="img/of1-lf8.jpg" class="t7"></td>
+		  	 	   	  			<td rowspan="2"><img class="t1" src="img/of1-lf3.jpg"></td>
+		  	 	   	  			<td rowspan="2"><img class="t2" src="img/of1-lf4.jpg"></td>
+		  	 	   	  		</tr>
+		  	 	   	  		<tr><td><img src="img/of1-lf2.jpg" class="t3"></td>	
+		  	 	   	  		</tr>
+		  	 	   	  		<tr><td colspan="2" rowspan="2"><img src="img/of1-lf5.jpg" class="t4"></td>
+		  	 	   	  			<td><img src="img/of1-lf6.jpg" class="t5"></td>
+		  	 	   	  		</tr>
+		  	 	   	  		<tr><td><img src="img/of1-lf7.jpg" class="t6"></td>
+		  	 	   	  			
+		  	 	   	  		</tr>
+		  	 	   	  	</table>
+		  	 	   	  </div>
+		  	 	   </div>
+		  	 	</div>
+		  	 	<div class="aside6right" id="aside6left">
+		  	 	    <div class="aside6right1">
+		  	 	    	<div class="ad4">
+		  	 	   	  	<img src="img/of3-1.jpg">
+		  	 	   	  	<div class="remen" id="remen2">
+		  	 	   	  		<ul>
+		  	 	   	  			<li>热门TOP</li>
+		  	 	   	  			<li>夏装新款</li>
+		  	 	   	  			<li>连衣裙</li>
+		  	 	   	  			<li>春色单鞋</li>
+		  	 	   	  			<li>沙发</li>
+		  	 	   	  			<li>真皮女包</li>
+		  	 	   	  			<li>风衣</li>
+		  	 	   	  			<li>按摩靠垫</li>
+		  	 	   	  			<li>运动服</li>
+		  	 	   	  			<li>四件套</li>
+		  	 	   	  			<!--<li>行李箱</li>-->
+		  	 	   	  		</ul>
+		  	 	   	  	</div>
+		  	 	   	  </div>
+		  	 	   	  <div class="ad4_4">
+		  	 	   	  	<table cellpadding="0" cellspacing="0">
+		  	 	   	  		<tr><td><img src="img/of1-lf8.jpg" class="t7"></td>
+		  	 	   	  			<td rowspan="2"><img class="t1" src="img/of1-lf3.jpg"></td>
+		  	 	   	  			<td rowspan="2"><img class="t2" src="img/of1-lf4.jpg"></td>
+		  	 	   	  		</tr>
+		  	 	   	  		<tr><td><img src="img/of1-lf2.jpg" class="t3"></td>	
+		  	 	   	  		</tr>
+		  	 	   	  		<tr><td colspan="2" rowspan="2"><img src="img/of1-lf5.jpg" class="t4"></td>
+		  	 	   	  			<td><img src="img/of1-lf6.jpg" class="t5"></td>
+		  	 	   	  		</tr>
+		  	 	   	  		<tr><td><img src="img/of1-lf7.jpg" class="t6"></td>
+		  	 	   	  			
+		  	 	   	  		</tr>
+		  	 	   	  	</table>
+		  	 	   	  </div>
+		  	 	    </div>
+		  	 	    <div class="aside6right2">
+		  	 	    	<div class="ad4">
+		  	 	   	  	<img src="img/of4-1.jpg">
+		  	 	   	  	<div class="remen" id="remen3">
+		  	 	   	  		<ul>
+		  	 	   	  			<li>热门TOP</li>
+		  	 	   	  			<li>夏装新款</li>
+		  	 	   	  			<li>连衣裙</li>
+		  	 	   	  			<li>春色单鞋</li>
+		  	 	   	  			<li>沙发</li>
+		  	 	   	  			<li>真皮女包</li>
+		  	 	   	  			<li>风衣</li>
+		  	 	   	  			<li>按摩靠垫</li>
+		  	 	   	  			<li>运动服</li>
+		  	 	   	  			<li>四件套</li>
+		  	 	   	  			<!--<li>行李箱</li>-->
+		  	 	   	  		</ul>
+		  	 	   	  	</div>
+		  	 	   	  </div>
+		  	 	   	  <div class="ad4_4">
+		  	 	   	  	<table cellpadding="0" cellspacing="0">
+		  	 	   	  		<tr><td><img src="img/of1-lf8.jpg" class="t7"></td>
+		  	 	   	  			<td rowspan="2"><img class="t1" src="img/of1-lf3.jpg"></td>
+		  	 	   	  			<td rowspan="2"><img class="t2" src="img/of1-lf4.jpg"></td>
+		  	 	   	  		</tr>
+		  	 	   	  		<tr><td><img src="img/of1-lf2.jpg" class="t3"></td>	
+		  	 	   	  		</tr>
+		  	 	   	  		<tr><td colspan="2" rowspan="2"><img src="img/of1-lf5.jpg" class="t4"></td>
+		  	 	   	  			<td><img src="img/of1-lf6.jpg" class="t5"></td>
+		  	 	   	  		</tr>
+		  	 	   	  		<tr><td><img src="img/of1-lf7.jpg" class="t6"></td>
+		  	 	   	  			
+		  	 	   	  		</tr>
+		  	 	   	  	</table>
+		  	 	   	  </div>
+		  	 	    </div>
+		  	 	</div>
+		  	 </div>
+		  	 <div class="aside7 ff" id="side7">
+		  	 	<div class="tit1"></div>
+		  	 	<div class="aside7_1">
+		  	 		<table>
+		  	 		<tr class="head1"><td colspan="2"><img src="img/head1.jpg" class="tt1"><img src="img/fashion-ma.png">
+		  	 		   </td>
+		  	 		</tr>
+		  	 		<tr><td rowspan="2" id="bq1"><img src="img/2.png" class="tt2">
+		  	 		     <!--<div id="a1">春夏搭配技巧<br/>
+		  	 		            百变潮我看</div>-->
+		  	 		     </span>
+		  	 		    </td>
+		  	 			<td><img src="img/3.png" class="tt3"></td>
+		  	 		</tr>
+		  	 		<tr><td><img src="img/4.png" class="tt4"></td></tr>
+		  	 	    </table>
+		  	 	</div>
+		  	 	<div class="aside7_2">
+		  	 		<table>
+		  	 		<tr class="head1"><td colspan="2"><img src="img/head2.jpg" class="tt1"><img src="img/fashion-ma.png">
+		  	 		   </td>
+		  	 		</tr>
+		  	 		<tr><td rowspan="2"><img src="img/5.png" class="tt2"></td>
+		  	 			<td><img src="img/3.png" class="tt3"></td>
+		  	 		</tr>
+		  	 		<tr><td><img src="img/4.png" class="tt4"></td></tr>
+		  	 	    </table>
+		  	 	</div>
+		  	 	<div class="aside7_3">
+		  	 		<table>
+		  	 		<tr class="head1"><td colspan="2"><img src="img/head3.jpg" class="tt1"><img src="img/fashion-ma.png">
+		  	 		   </td>
+		  	 		</tr>
+		  	 		<tr><td rowspan="2"><img src="img/2.png" class="tt2"></td>
+		  	 			<td><img src="img/3.png" class="tt3"></td>
+		  	 		</tr>
+		  	 		<tr><td><img src="img/4.png" class="tt4"></td></tr>
+		  	 	    </table>
+		  	 	</div>
+		  	 	<div class="aside7_4">
+		  	 		<table>
+		  	 		<tr class="head1"><td colspan="2"><img src="img/head4.jpg" class="tt1"><img src="img/fashion-ma.png">
+		  	 		   </td>
+		  	 		</tr>
+		  	 		<tr><td rowspan="2"><img src="img/5.png" class="tt2"></td>
+		  	 			<td><img src="img/3.png" class="tt3"></td>
+		  	 		</tr>
+		  	 		<tr><td><img src="img/4.png" class="tt4"></td></tr>
+		  	 	    </table>
+		  	 	</div>
+		  	 </div>
+		  	 <div class="aside8 ff" id="side8">
+		  	 	<div class="tit2"></div>
+		  	 	<div class="aside7_1">
+		  	 		<table>
+		  	 		<tr class="head1"><td colspan="2"><img src="img/head1.jpg" class="tt1"><img src="img/fashion-ma.png">
+		  	 		   </td>
+		  	 		</tr>
+		  	 		<tr><td rowspan="2"><img src="img/2.png" class="tt2"></td>
+		  	 			<td><img src="img/3.png" class="tt3"></td>
+		  	 		</tr>
+		  	 		<tr><td><img src="img/4.png" class="tt4"></td></tr>
+		  	 	    </table>
+		  	 	</div>
+		  	 	<div class="aside7_2">
+		  	 		<table>
+		  	 		<tr class="head1"><td colspan="2"><img src="img/head2.jpg" class="tt1"><img src="img/fashion-ma.png">
+		  	 		   </td>
+		  	 		</tr>
+		  	 		<tr><td rowspan="2"><img src="img/5.png" class="tt2"></td>
+		  	 			<td><img src="img/3.png" class="tt3"></td>
+		  	 		</tr>
+		  	 		<tr><td><img src="img/4.png" class="tt4"></td></tr>
+		  	 	    </table>
+		  	 	</div>
+		  	 	<div class="aside7_3">
+		  	 		<table>
+		  	 		<tr class="head1"><td colspan="2"><img src="img/head3.jpg" class="tt1"><img src="img/fashion-ma.png">
+		  	 		   </td>
+		  	 		</tr>
+		  	 		<tr><td rowspan="2"><img src="img/2.png" class="tt2"></td>
+		  	 			<td><img src="img/3.png" class="tt3"></td>
+		  	 		</tr>
+		  	 		<tr><td><img src="img/4.png" class="tt4"></td></tr>
+		  	 	    </table>
+		  	 	</div>
+		  	 	<div class="aside7_4">
+		  	 		<table>
+		  	 		<tr class="head1"><td colspan="2"><img src="img/head4.jpg" class="tt1"><img src="img/fashion-ma.png">
+		  	 		   </td>
+		  	 		</tr>
+		  	 		<tr><td rowspan="2"><img src="img/5.png" class="tt2"></td>
+		  	 			<td><img src="img/3.png" class="tt3"></td>
+		  	 		</tr>
+		  	 		<tr><td><img src="img/4.png" class="tt4"></td></tr>
+		  	 	    </table>
+		  	 	</div>
+		  	 </div>
+		  </div>
+		  <div class="aside9" id="aside9">
+		  	 <div class="hh1"></div>
+		  	 <div class="hh2">
+		  	 	<img src="img/asd-1.webp">
+		  	 	<div class="hh2_1">
+		  	 		<h5>香港森博苹果手机</h5>
+		  	 		<p>48*48超小身材一体成型铝壳机身，精致小巧，携带方便；</p>
+		  	 		<span>61人说好</span>
+		  	 	</div>
+		  	 </div>
+		  	 <div class="hh2">
+		  	 	<img src="img/asd-2.webp">
+		  	 	<div class="hh2_1">
+		  	 		<h5>丹麦隔热瓷杯</h5>
+		  	 		<p>48*48超小身材一体成型铝壳机身，精致小巧，携带方便；</p>
+		  	 		<span>61人说好</span>
+		  	 	</div>
+		  	 </div>
+		  	 <div class="hh2">
+		  	 	<img src="img/asd-3.webp">
+		  	 	<div class="hh2_1">
+		  	 		<h5>北欧简约彩陶餐具</h5>
+		  	 		<p>48*48超小身材一体成型铝壳机身，精致小巧，携带方便；</p>
+		  	 		<span>61人说好</span>
+		  	 	</div>
+		  	 </div>
+		  	 <div class="hh2">
+		  	 	<img src="img/asd-1.webp">
+		  	 	<div class="hh2_1">
+		  	 		<h5>香港森博苹果手机</h5>
+		  	 		<p>48*48超小身材一体成型铝壳机身，精致小巧，携带方便；</p>
+		  	 		<span>61人说好</span>
+		  	 	</div>
+		  	 </div>
+		  	 <div class="hh2">
+		  	 	<img src="img/asd-2.webp">
+		  	 	<div class="hh2_1">
+		  	 		<h5>丹麦隔热瓷杯</h5>
+		  	 		<p>48*48超小身材一体成型铝壳机身，精致小巧，携带方便；</p>
+		  	 		<span>61人说好</span>
+		  	 	</div>
+		  	 </div>
+		  	 <div class="hh2">
+		  	 	<img src="img/asd-3.webp">
+		  	 	<div class="hh2_1">
+		  	 		<h5>北欧简约彩陶餐具</h5>
+		  	 		<p>48*48超小身材一体成型铝壳机身，精致小巧，携带方便；</p>
+		  	 		<span>61人说好</span>
+		  	 	</div>
+		  	 </div>
+		  	 <div class="hh2">
+		  	 	<img src="img/asd-1.webp">
+		  	 	<div class="hh2_1">
+		  	 		<h5>香港森博苹果手机</h5>
+		  	 		<p>48*48超小身材一体成型铝壳机身，精致小巧，携带方便；</p>
+		  	 		<span>61人说好</span>
+		  	 	</div>
+		  	 </div>
+		  	 <div class="hh2">
+		  	 	<img src="img/asd-2.webp">
+		  	 	<div class="hh2_1">
+		  	 		<h5>丹麦隔热瓷杯</h5>
+		  	 		<p>48*48超小身材一体成型铝壳机身，精致小巧，携带方便；</p>
+		  	 		<span>61人说好</span>
+		  	 	</div>
+		  	 </div>
+		  	 <div class="hh2">
+		  	 	<img src="img/asd-3.webp">
+		  	 	<div class="hh2_1">
+		  	 		<h5>北欧简约彩陶餐具</h5>
+		  	 		<p>48*48超小身材一体成型铝壳机身，精致小巧，携带方便；</p>
+		  	 		<span>61人说好</span>
+		  	 	</div>
+		  	 </div>
+		  	 <div class="hh2">
+		  	 	<img src="img/asd-1.webp">
+		  	 	<div class="hh2_1">
+		  	 		<h5>香港森博苹果手机</h5>
+		  	 		<p>48*48超小身材一体成型铝壳机身，精致小巧，携带方便；</p>
+		  	 		<span>61人说好</span>
+		  	 	</div>
+		  	 </div>
+		  </div>
+		  </div>
+		  <!--楼梯导航-->
+		  <div id="floo">
+		  	 <ul id="dH">
+		  	<li class="floor">常逛</li>
+		  	<li>时尚</li>
+		  	<li>品质</li>
+		  	</ul>
+		  </div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/index.js" ></script>
+	<script type="text/javascript" src="js/jquery-1.12.1.min.js" ></script>
+</html>
