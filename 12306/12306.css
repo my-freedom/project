@@ -1,0 +1,372 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+.all{
+	width:970px;
+	height:1200px;
+	margin:0 auto;
+	background:#E5E5E5;
+	border:2px solid #B2B2B2;
+}
+.top{
+	width:950px;
+	height:150px;
+	margin:0 auto;
+	background:url(img/top.png);
+	border-bottom: 1px solid #5A83C2;
+}
+.nav{
+	width:950px;
+	margin:0 auto;
+	height:30px;
+	background:url(img/menu-pingpu.png);
+}
+.nav ul{
+	float:right;
+}
+.nav .time{
+	width:80px;
+    height:30px;
+	font-family: "微软雅黑";
+    font-size: 14px;
+    color:#EDF6AC;
+    padding-bottom:15px;
+    padding-left: 20px;
+}
+.main{
+	background:white;
+	width:950px;
+	height:1000px;
+	margin:0 auto;
+	position: relative;
+}
+.nav ul li{
+	color:white;
+	font-family: "微软雅黑";
+	list-style: none;
+	float:left;
+    width:80px;
+    height:30px;
+    line-height: 30px;
+    font-size: 14px;
+}
+.aside1,.aside3{
+	width:183px;
+	height:240px;
+	margin-left:7px;
+	overflow: hidden;
+	background:white;
+	float:left;
+	margin-top: 5px;
+}
+.aside1 .ad1{
+	border:1px solid #D5D5D5;
+	margin-bottom: 5px;
+}
+.aside1 h4,.aside3 h4{
+	width:183px;
+    height:40px;
+    line-height: 40px;
+    background:#EDF2F8;
+    text-align: center;
+}
+#pic ul{
+	position: absolute;
+	top: 140px;
+	left:50px;
+}
+#pic ul li{
+	width:15px;
+	height:15px;
+	border-radius: 50%;
+	background:white;
+	float:left;
+	margin:0 10px;
+	list-style: none;
+	/*position: absolute;*/
+}
+#pic1 ul{
+	position: absolute;
+	top: 140px;
+	left:800px;
+	width:150px;
+	height:30px;
+}
+#pic1 ul li{
+	width:15px;
+	height:15px;
+	border-radius: 50%;
+	background:white;
+	float:left;
+	margin:0 10px;
+	list-style: none;
+	/*position: absolute;*/
+}
+.aside2{
+	width:550px;
+	height:250px;
+	float:left;
+	margin-left: 10px;
+	border:1px solid #ccc;
+}
+.title{
+	margin-top: 3px;
+	background:url(img/earth-pingpu.png);
+    width:550px;
+    height:30px;
+}
+.title img{
+	margin-left: 20px;
+	margin-top: 5px;
+}
+.title div{
+	color:#CF4B11;
+	margin-top:10px;
+	margin-right:380px;
+	font-weight: bold;
+	font-size: 14px;
+	float:right;
+	font-family: "微软雅黑";
+}
+.genzhengshu{
+	margin-top: 10px;
+	margin-left: 10px;
+	color:blue;
+	font-family: "微软雅黑";
+}
+.genzhengshu a{
+	color:red;
+}
+.adv1{
+	margin-left: 30px;
+	font-size: 14px;
+	font-weight: bold;
+}
+.adv1 li{
+	height:25px;
+	line-height: 25px;
+}
+.adv1  i{
+   float: right;
+   margin-right: 10px;
+}
+.gengduo{
+	width:50px;
+	line-height: 25px;
+	height:25px;
+	font-size: 14px;
+	font-weight: bold;
+	margin-left: 500px;
+}
+.ab1{
+	border:1px solid #D5D5D5;
+}
+.aside4{
+	width:188px;
+	height:550px;
+	clear:both;
+	/*float: left;*/
+	margin-top:-10px;
+	overflow: hidden;
+	margin-left: 10px;
+}
+.aside4 ul li{
+	margin-right: 5px;
+	margin-top: 2px;
+	list-style: none;
+    width:180px;
+    height:40px;
+    line-height: 40px;
+    background: #F0F7FC;
+    font-size: 14px;
+    padding-left: 5px;
+    border:1px solid #D8E6F3;
+    font-weight: bold;
+}
+.aside4 ul li i{
+   float:left;
+   margin-right: 10px;
+}
+.aside5{
+	width:550px;
+	height:430px;
+	position: absolute;
+	top:260px;
+	right:200px;
+}
+.search{
+	width:550px;
+	height:33px;
+	background:url(img/searth-pingpu.png);
+}
+.search span{
+	font-weight: bold;
+	font-size: 14px;
+	font-family: "微软雅黑";
+	margin-left: 20px;
+	margin-right: 20px;
+}
+.search input{
+	margin-top: 5px;
+}
+.aside5 .search img{
+	float: right;
+	margin-right: 0px;
+	 margin-top: 5px;
+}
+.nav1{
+	list-style: none;
+	width:550px;
+	height:35px;
+	line-height: 35px;
+	background:#F3F3F3;
+	font-weight: bold;
+}
+.nav1 li{
+	float:left;
+	margin-right: 20px;
+	margin-left: 10px;
+	height:35px;
+	font-size: 14px;
+	font-weight: bold;cursor: pointer;
+}
+.active{
+	background:white;
+	border-top:1px solid red;
+	padding:0 10px;
+	border-bottom: 1px solid #F3F3F3;
+	height:34px;
+}
+.adv3{
+	width:550px;
+	overflow: hidden;
+}
+.adv3 img{
+	width:270px;
+}
+.info{
+	width:550px;
+	height:430px;
+	border:1px solid #D6D6D6;
+}
+.aside6{
+	width:190px;
+	height:500px;
+	position: absolute;
+	right:5px;
+	top:210px;
+}
+.adv4 ul li i{
+   float:left;
+   margin-right: 10px;
+}
+.adv4 li{
+   margin-right: 5px;
+	margin-top: 2px;
+	list-style: none;
+    width:180px;
+    height:40px;
+    line-height: 40px;
+    background: #F0F7FC;
+    font-size: 14px;
+    padding-left: 5px;
+    border:1px solid #D8E6F3;
+    font-weight: bold;
+}
+.footer{
+	margin:0 auto;
+	width:900px;
+	height:100px;
+	border-top: 7px solid #003772;
+	padding-top: 50px;
+	border-bottom: 3px solid #8FADC5;
+}
+.footer p{
+   text-align: center;
+   font-weight: bold;
+}
+.infomation{
+	margin-top:10px;
+	width:550px;
+	overflow: hidden;
+}
+.infomation table{
+   text-align: center;
+   margin-left:5px;
+   font-weight: bold;
+   border:1px solid #F8F8F8;
+}
+.title1{
+	background:#F3F3F3;
+}
+.infomation table td{
+   width:120px;
+   height:33px;
+}
+.info1{
+	font-size: 12px;
+}
+.info2{
+	color:red;
+}
+#ma{
+	width:550px;
+	overflow: hidden;
+}
+#list{
+	width:2200px;
+}
+#tab1,#tab2,#tab3,#tab4{
+	width:550px;
+	height:389px;
+	float:left;
+}
+#tab1 ul li,#tab3 ul li,#tab4 ul li{
+	color:black;
+	height:30px;
+	margin-left:40px;
+	font-size:14px;
+}
+#tab2 ul li{
+	height:40px;
+	margin:10px 40px;
+   font-size:14px;
+   font-weight: bold;
+}
+#tab1 ul li a,#tab2 ul li a,#tab3 ul li a,#tab4 ul li a{
+	color:black;
+	text-decoration: none;
+	font-weight: bold;
+}
+#tab2,#tab3,#tab4{
+	float:left;
+}
+.scrollright{
+	overflow: scroll;
+	overflow-x:hidden;
+	height:230px;
+	width:186px;
+	border:1px solid #abd5ff;
+	border-top:none;
+	border-radius: 4px;
+}
+.scrollright ul li a{
+	color:black;
+	text-decoration:none; 
+	font-size: 14px;
+	font-weight: bold;
+}
+.scrollright ul li a:hover{
+	color:red;
+	text-decoration:underline; 
+}
+.scrollright ul li{
+	list-style:none;
+	margin-left:5px
+}
+.footbar{
+	width:186px;
+	height:10px;
+	background-image: url("img/area-bottom-pingpu.png");
+}
