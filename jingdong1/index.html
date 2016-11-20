@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript" src="js/jquery-1.12.1.min.js" ></script>
+		<script type="text/javascript" src="js/index.js" ></script>
+		<link rel="stylesheet" href="css/index.css" />
+	</head>
+	<body>
+		<div class="main">
+			<header>
+				<div class="headermain">
+					<span class="beijing" id="beijing">送至：<span>北京</span><img src="img/san1.png"></span>
+					<span id="hide">
+						<span id="hi0">辽宁</span>
+						<span id="hi1">河南</span>
+						<span id="hi2">广西</span>
+						<span id="hi3">厦门</span>
+						<span id="hi4">山西</span>
+						<span id="hi5">吉林</span>
+						<span id="hi6">山东</span>
+						<span id="hi7">贵州</span>
+						<span id="hi8">河北</span>
+						<span id="hi9">宁夏</span>
+						<span id="hi10">云南</span>
+						<span id="hi11">湖北</span>
+					</span>
+					<div class="headernav">
+						<ul>
+							<li><a href="#">你好，请登录</a>&nbsp;<a href="#" class="free">免费注册</a></li>
+							<li>我的订单</li>
+							<li class="jd" id="jd1">我的京东<img src="img/san1.png">
+							  <ul class="wdjd">
+							  	<li>我的京东</li>
+							  	<li>我的京东</li>
+							  	<li>我的京东</li>
+							  </ul>
+							</li>
+							<li>京东会员</li>
+							<li>企业采购</li>
+							<li class="jd" id="jd2"><img class="phone" src="img/phone.png">京东手机<img src="img/san1.png">
+							   <ul class="jdsj">
+							  	<li>京东手机</li>
+							  	<li>京东手机</li>
+							  	<li>京东手机</li>
+							  </ul>
+							</li>
+							<li class="jd" id="jd3">关注京东<img src="img/san1.png">
+							   <ul class="gzjd">
+							  	<li>关注京东</li>
+							  	<li>关注京东</li>
+							  	<li>关注京东</li>
+							   </ul>
+							</li>
+							<li class="jd" id="jd4">客服服务<img src="img/san1.png">
+							   <ul class="kffw">
+							  	<li>客服服务</li>
+							  	<li>客服服务</li>
+							  	<li>客服服务</li>
+							  </ul>
+							</li>
+							<li class="jd" id="jd5">网站导航<img src="img/san1.png">
+							   <ul class="wzdh">
+							  	<li>网站导航</li>
+							  	<li>网站导航</li>
+							  	<li>网站导航</li>
+							   </ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</header>
+			<nav>
+				<div class="top">
+				   <div class="logo"><img src="img/logo.png"></div>
+				   <div class="search">
+				   	  <form>
+				   	  	<input type="text" class="btnsearch"/>
+				   	  	<input type="button" value="搜索" class="btnsubmit">
+				   	  </form>
+				   	  <ul class="searchnav">
+				   	  	<li class="free">199减100</li>
+				   	  	<li>66元秒风扇</li>
+				   	  	<li>1元免邮</li>
+				   	  	<li>低至9.9</li>
+				   	  	<li>啤酒趴</li>
+				   	  	<li>豆浆机</li>
+				   	  	<li>男士帆布鞋</li>
+				   	  	<li>0元试用</li>
+				   	  	<li>女士香水</li>
+				   	  </ul>
+				   </div>
+				   <div class="buycar">
+				   	 <img src="img/car.png" class="car"/>我的购物车<img src="img/cart-num.png" class="cart">
+				   	 <img src="img/rightsan.png" class="rightsan">
+				   	 <div class="car1"></div>
+				   </div>
+				   
+				   <div class="topnav">
+				   	 <ul>
+				   	 	<li>服装城</li>
+				   	 	<li>美食馆</li>
+				   	 	<li>京东超市</li>
+				   	 	<li>生鲜</li>
+				   	 	<li>全球购</li>
+				   	 	<li>闪购</li>
+				   	 	<li>团购</li>
+				   	 	<li>拍卖</li>
+				   	 	<li>金融</li>
+				   	 </ul>
+				   </div>
+				</div>
+			</nav>
+			<section>
+				<div class="section1">
+                    <div class="asider1">
+                    	<h3>全部商品分类</h3>
+                    	<div id="list">
+                    		<ul id="list0"></ul>
+                    	</div>
+                    	<div class="lis" id="lis0">1</div>
+                    	<div class="lis" id="lis1">2</div>
+                    	<div class="lis" id="lis2">3</div>
+                    </div>
+				    <div class="asider2">
+				    	<ul class="btnc">
+				    		<li id="li1">1</li>
+				    		<li id="li2">2</li>
+				    		<li id="li3">3</li>
+				    		<li id="li4">4</li>
+				    		<li id="li5">5</li>
+				    		<li id="li6">6</li>
+				    	</ul>
+				    	<img id="images" src="img/asd-1.jpg"/>
+				    </div>
+				    <div class="asider3">
+				    	<div class="asider3tit">
+				    		京东快报<a href="#">更多 ></a>
+				    	</div>
+				    	<ul>
+				    		<li><span>【特惠】</span>三夜狂欢季，第二人半价！</li>
+				    		<li><span>【公告】</span>京东最先捐赠物资抵达抗洪前线</li>
+				    		<li><span>【特惠】</span>自营文具风暴每满199减100</li>
+				    		<li><span>【公告】</span>抢险救灾不停歇，京东在行动</li>
+				    		<li><span>【特惠】</span>每日享折扣，京东品质游</li>
+				    	</ul>
+				        <table cellpadding="0" cellspacing="0">
+				        	<tr><td><img src="img/menu-img1.png"/><br />话费</td>
+				        		<td><img src="img/menu-img2.png"/><br />机票</td>
+				        		<td><img src="img/menu-img3.png"/><br />电影票</td>
+				        		<td><img src="img/menu-img4.png"/><br />游戏</td>
+				        	</tr>
+				        	<tr><td><img src="img/menu-img5.png"/><br />彩票</td>
+				        		<td><img src="img/menu-img6.png"/><br />加油卡</td>
+				        		<td><img src="img/menu-img7.png"/><br />酒店</td>
+				        		<td><img src="img/menu-img8.png"/><br />火车票</td>
+				        	</tr>
+				        	<tr><td><img src="img/menu-img9.png"/><br />众筹</td>
+				        		<td><img src="img/menu-img10.png"/><br />理财</td>
+				        		<td><img src="img/menu-img11.png"/><br />礼品卡</td>
+				        		<td><img src="img/menu-img12.png"/><br />白条</td>
+				        		
+				        	</tr>
+				        </table>
+				        <img src="img/img-menu-bottom.jpg" class="menubottom"/>
+				    </div>
+				</div>
+			    <div class="section2">
+			    	<div class="section2ta"><img src="img/tuijian-1.png"></div>
+			    	<div class="section2pic">
+			    		<div class="content">
+			    			<div class="imgs">
+			    				<img src="img/tuijian-2.jpg">
+			    				<img src="img/tuijian-3.jpg">
+			    				<img src="img/tuijian-4.jpg">
+			    				<img src="img/tuijian-5.jpg">
+			    				<img src="img/tuijian-6.jpg">
+			    				<img src="img/tuijian-7.jpg">
+			    				<img src="img/tuijian-8.jpg">
+			    				<img src="img/tuijian-9.jpg">
+			    				<img src="img/tuijian-10.jpg">
+			    				<img src="img/tuijian-11.jpg">
+			    				<img src="img/tuijian-12.jpg">
+			    				<img src="img/tuijian-13.jpg">
+			    				<img src="img/tuijian-14.jpg">
+			    				<img src="img/tuijian-15.jpg">
+			    				<img src="img/tuijian-16.jpg">
+			    				<img src="img/tuijian-2.jpg">
+			    			</div>
+			    			<div class="reps"></div>
+			    		</div>
+			    	</div>
+			    </div>
+			    <div class="section3">
+			    	<h2>猜你喜欢<img src="img/Clike-img-1.png"></h2>
+			    	<div class="section3info">
+			    		<div class="section3info1">
+			    			<img src="img/light-1.jpg"/>
+			    			<p>雷士照明 了的 卧室灯 吸顶灯 灯具灯饰现代简约</p>
+			    			<span class="price">129.00¥</span>
+			    		</div>
+			    		<div class="section3info2">
+			    			<img src="img/light-2.jpg"/>
+			    			<p>雷士照明 了的 卧室灯 吸顶灯 灯具灯饰现代简约</p>
+			    			<span class="price">129.00¥</span>
+			    		</div>
+			    		<div class="section3info3">
+			    			<img src="img/light-3.jpg"/>
+			    			<p>雷士照明 了的 卧室灯 吸顶灯 灯具灯饰现代简约</p>
+			    			<span class="price">129.00¥</span>
+			    		</div>
+			    		<div class="section3info4">
+			    			<img src="img/light-4.jpg"/>
+			    			<p>雷士照明 了的 卧室灯 吸顶灯 灯具灯饰现代简约</p>
+			    			<span class="price">129.00¥</span>
+			    		</div>
+			    		<div class="section3info5">
+			    			<img src="img/light-5.jpg"/>
+			    			<p>雷士照明 了的 卧室灯 吸顶灯 灯具灯饰现代简约</p>
+			    			<span class="price">129.00¥</span>
+			    		</div>
+			    		<div class="section3info6">
+			    			<img src="img/light-6.jpg"/>
+			    			<p>雷士照明 了的 卧室灯 吸顶灯 灯具灯饰现代简约</p>
+			    			<span class="price">129.00¥</span>
+			    		</div>
+			    	</div>
+			    </div>
+			    <div class="section4">
+			    	<h2>京东.品质生活</h2>
+			    	<div class="section4info">
+			    		<table cellpadding="0" cellspacing="0">
+				        	<tr><td colspan="2" class="t1">新发现</td><td class="t1">好东西</td>
+				        		<td colspan="2" class="t1">品牌街</td>
+				        	</tr>
+				        	<tr><td colspan="2" class="t3">
+				        		<div class="tt3">
+				        			<span class="info1">尚新品</span><br/>
+				        			<span class="info2">尚新品</span><br/>
+				        			<span class="info3">尚新品</span><br/>
+				        		</div>
+				        		<img src="img/life-img1.jpg"></td>
+				        		<td class="t2">
+				        			<div class="tt2">
+				        			   <span class="info1">尚新品</span><br/>
+				        			<span class="info2">尚新品</span><br/>
+				        			<span class="info3">尚新品</span><br/>
+				        		     </div>
+				        			<img src="img/good-1.jpg"></td>
+				        		<td colspan="2" class="t3"><img src="img/jie-1.png"></td>
+				        	</tr>
+				        	<tr><td class="t2"><img src="img/life-img2.jpg"></td>
+				        		<td class="t2"><img src="img/life-img3.jpg"></td>
+				        		<td class="t2">
+				        			<div class="ttt2">
+				        			<span class="info1">尚新品</span><br/>
+				        			<span class="info2">尚新品</span><br/>
+				        			<span class="info3">尚新品</span><br/>
+				        			</div>
+				        			<img src="img/good-2.jpg"></td>
+				        		<td class="t2">
+				        			<div class="ttt2">
+				        				<span class="info1">尚新品</span><br/>
+				        			    <span class="info2">尚新品</span><br/>
+				        			    <span class="info3">尚新品</span><br/>
+				        			</div><img src="img/jie-2.jpg"></td>
+				        		<td class="t2"><img src="img/jie-3.jpg"></td>
+				        	</tr>
+				        </table>
+			    	</div>
+			    	<div class="section4asider">
+			    		<table>
+			    			<tr>
+			    				<td><img src="img/shangbiao-1.jpg"></td>
+			    				<td><img src="img/shangbiao-2.jpg"></td></tr>
+			    			<tr>
+			    				<td><img src="img/shangbiao-3.jpg"></td>
+			    				<td><img src="img/shangbiao-4.jpg"></td></tr>
+			    			<tr>
+			    				<td><img src="img/shangbiao-5.png"></td>
+			    				<td><img src="img/shangbiao-6.png"></td></tr>
+			    			<tr>
+			    				<td><img src="img/shangbiao-7.jpg"></td>
+			    				<td><img src="img/shangbiao-8.jpg"></td></tr>
+			    			<tr>
+			    				<td><img src="img/shangbiao-9.jpg"></td>
+			    				<td><img src="img/shangbiao-10.jpg"></td></tr>
+			    			<tr>
+			    				<td><img src="img/shangbiao-11.jpg"></td>
+			    				<td><img src="img/shangbiao-12.jpg"></td></tr>
+			    		</table>
+			    	</div>
+			    </div>
+			    <div class="section5">
+				    <img src="img/long-img1.jpg"/>
+				    <img src="img/long-img2.jpg"/>
+				    <img src="img/long-img3.jpg"/>
+			    </div>
+			   <!-- 1F-->
+			   <div class="floor">
+			    <div class="section6">
+			    	<div class="section6info">
+			    		<div class="xbnav">
+			    		   <div class="xb">1F服装鞋包</div>
+			    		   <div class="xbinfo">
+			    		   <ul class="dp"><li class="active">大牌</li>
+			    		   	   <li>男装</li>
+			    		   	   <li>女装</li>
+			    		   	   <li>鞋靴</li>
+			    		   	   <li>箱包</li>
+			    		   	   <li>内衣配饰</li>
+			    		   	   <li>珠宝首饰</li>
+			    		   	   <li>奢侈礼品</li>
+			    		   	   <li>奢华腕表</li>
+			    		   </ul>
+			    		   </div>
+			    		</div>
+			    		<div class="tab0">
+			    		<div class="tab1" id="ddd1">
+			    			<table cellpadding="0" cellspacing="0">
+			    				<tr>
+			    					<td rowspan="3"><img class="flash1" src="img/img-flash-1.jpg"></td>
+			    					<td><img class="flash2" src="img/table-1.jpg"></td>
+			    					<td><img  class="flash5" src="img/table-2.jpg"></td>
+			    					<td><img  class="flash5" src="img/table-3.jpg"></td>
+			    				</tr>
+			    				<tr>
+			    					<td rowspan="2"><img class="flash3" src="img/LTloopshow-1.jpg"></td>
+			    					<td><img class="flash5" src="img/table-4.jpg"></td>
+			    					<td><img  class="flash5" src="img/table-5.jpg"></td>
+			    				</tr>
+			    				<tr>
+			    					<td><img  class="flash5" src="img/table-6.jpg"></td>
+			    					<td rowspan="2"><img class="flash5" src="img/table-7.jpg"></td>
+			    				</tr>
+			    				<tr>
+			    					<td><img  class="flash4" src="img/flash-bottom.jpg"></td>
+			    					<td><img   class="flash2" class="flash2" src="img/table-8.jpg"></td>
+			    					<td><img  class="flash5" src="img/table-9.jpg"></td>
+			    				</tr>
+			    			</table>
+			    		</div>
+			    	  
+			    	    <div class="tab2" id="ddd2">2222222222222222</div>
+			    	    <div class="tab3" id="ddd3">3333333333333333</div>
+			    	    <div class="tab4" id="ddd4">4444444444444444</div>
+			    	    <div class="tab5" id="ddd5">5555555555555555</div>
+			    	    <div class="tab6" id="ddd6">6666666666666666</div>
+			    	    <div class="tab7" id="ddd7">7777777777777777</div>
+			    	    <div class="tab8" id="ddd8">8888888888888888</div>
+			    	    <div class="tab9" id="ddd9">9999999999999999</div></div>
+			    	</div>
+			    	<div class="section6footer">
+			    		<img src="img/onefloor-bottom-10.jpg">
+			    		<img src="img/onefloor-bottom-9.jpg">
+			    		<img src="img/onefloor-bottom-8.jpg">
+			    		<img src="img/onefloor-bottom-7.jpg">
+			    		<img src="img/onefloor-bottom-6.jpg">
+			    		<img src="img/onefloor-bottom-5.jpg">
+			    		<img src="img/onefloor-bottom-4.jpg">
+			    		<img src="img/onefloor-bottom-3.jpg">
+			    		<img src="img/onefloor-bottom-2.png">
+			    		<img src="img/onefloor-bottom-1.jpg">
+			    	</div>
+			    </div>
+			    <!--2F-->
+			     <div class="section6">
+			    	<div class="section6info">
+			    		<div class="xbnav">
+			    		   <div class="xb">2F服装鞋包</div>
+			    		   <div class="xbinfo">
+			    		   <ul class="dp"><li class="active">大牌</li>
+			    		   	   <li>男装</li>
+			    		   	   <li>女装</li>
+			    		   	   <li>鞋靴</li>
+			    		   	   <li>箱包</li>
+			    		   	   <li>内衣配饰</li>
+			    		   	   <li>珠宝首饰</li>
+			    		   	   <li>奢侈礼品</li>
+			    		   	   <li>奢华腕表</li>
+			    		   </ul>
+			    		   </div>
+			    		</div>
+			    		<div class="tab0">
+			    		<div class="tab1">
+			    			<table cellpadding="0" cellspacing="0">
+			    				<tr>
+			    					<td rowspan="3"><img class="flash1" src="img/img-flash-1.jpg"></td>
+			    					<td><img class="flash2" src="img/table-1.jpg"></td>
+			    					<td><img  class="flash5" src="img/table-2.jpg"></td>
+			    					<td><img  class="flash5" src="img/table-3.jpg"></td>
+			    				</tr>
+			    				<tr>
+			    					<td rowspan="2"><img class="flash3" src="img/LTloopshow-1.jpg"></td>
+			    					<td><img class="flash5" src="img/table-4.jpg"></td>
+			    					<td><img  class="flash5" src="img/table-5.jpg"></td>
+			    				</tr>
+			    				<tr>
+			    					<td><img  class="flash5" src="img/table-6.jpg"></td>
+			    					<td rowspan="2"><img class="flash5" src="img/table-7.jpg"></td>
+			    				</tr>
+			    				<tr>
+			    					<td><img  class="flash4" src="img/flash-bottom.jpg"></td>
+			    					<td><img   class="flash2" class="flash2" src="img/table-8.jpg"></td>
+			    					<td><img  class="flash5" src="img/table-9.jpg"></td>
+			    				</tr>
+			    			</table>
+			    		</div>
+			    	  
+			    	    <div class="tab2">2222222222222222</div>
+			    	    <div class="tab3">3333333333333333</div>
+			    	    <div class="tab4">4444444444444444</div>
+			    	    <div class="tab5">5555555555555555</div>
+			    	    <div class="tab6">6666666666666666</div>
+			    	    <div class="tab7">7777777777777777</div>
+			    	    <div class="tab8">8888888888888888</div>
+			    	    <div class="tab9">9999999999999999</div></div>
+			    	</div>
+			    	<div class="section6footer">
+			    		<img src="img/onefloor-bottom-10.jpg">
+			    		<img src="img/onefloor-bottom-9.jpg">
+			    		<img src="img/onefloor-bottom-8.jpg">
+			    		<img src="img/onefloor-bottom-7.jpg">
+			    		<img src="img/onefloor-bottom-6.jpg">
+			    		<img src="img/onefloor-bottom-5.jpg">
+			    		<img src="img/onefloor-bottom-4.jpg">
+			    		<img src="img/onefloor-bottom-3.jpg">
+			    		<img src="img/onefloor-bottom-2.png">
+			    		<img src="img/onefloor-bottom-1.jpg">
+			    	</div>
+			    </div>
+			     <!--3F-->
+			     <div class="section6">
+			    	<div class="section6info">
+			    		<div class="xbnav">
+			    		   <div class="xb">3F服装鞋包</div>
+			    		   <div class="xbinfo">
+			    		   <ul class="dp"><li class="active">大牌</li>
+			    		   	   <li>男装</li>
+			    		   	   <li>女装</li>
+			    		   	   <li>鞋靴</li>
+			    		   	   <li>箱包</li>
+			    		   	   <li>内衣配饰</li>
+			    		   	   <li>珠宝首饰</li>
+			    		   	   <li>奢侈礼品</li>
+			    		   	   <li>奢华腕表</li>
+			    		   </ul>
+			    		   </div>
+			    		</div>
+			    		<div class="tab0">
+			    		<div class="tab1">
+			    			<table cellpadding="0" cellspacing="0">
+			    				<tr>
+			    					<td rowspan="3"><img class="flash1" src="img/img-flash-1.jpg"></td>
+			    					<td><img class="flash2" src="img/table-1.jpg"></td>
+			    					<td><img  class="flash5" src="img/table-2.jpg"></td>
+			    					<td><img  class="flash5" src="img/table-3.jpg"></td>
+			    				</tr>
+			    				<tr>
+			    					<td rowspan="2"><img class="flash3" src="img/LTloopshow-1.jpg"></td>
+			    					<td><img class="flash5" src="img/table-4.jpg"></td>
+			    					<td><img  class="flash5" src="img/table-5.jpg"></td>
+			    				</tr>
+			    				<tr>
+			    					<td><img  class="flash5" src="img/table-6.jpg"></td>
+			    					<td rowspan="2"><img class="flash5" src="img/table-7.jpg"></td>
+			    				</tr>
+			    				<tr>
+			    					<td><img  class="flash4" src="img/flash-bottom.jpg"></td>
+			    					<td><img   class="flash2" class="flash2" src="img/table-8.jpg"></td>
+			    					<td><img  class="flash5" src="img/table-9.jpg"></td>
+			    				</tr>
+			    			</table>
+			    		</div>
+			    	  
+			    	    <div class="tab2">2222222222222222</div>
+			    	    <div class="tab3">3333333333333333</div>
+			    	    <div class="tab4">4444444444444444</div>
+			    	    <div class="tab5">5555555555555555</div>
+			    	    <div class="tab6">6666666666666666</div>
+			    	    <div class="tab7">7777777777777777</div>
+			    	    <div class="tab8">8888888888888888</div>
+			    	    <div class="tab9">9999999999999999</div></div>
+			    	</div>
+			    	<div class="section6footer">
+			    		<img src="img/onefloor-bottom-10.jpg">
+			    		<img src="img/onefloor-bottom-9.jpg">
+			    		<img src="img/onefloor-bottom-8.jpg">
+			    		<img src="img/onefloor-bottom-7.jpg">
+			    		<img src="img/onefloor-bottom-6.jpg">
+			    		<img src="img/onefloor-bottom-5.jpg">
+			    		<img src="img/onefloor-bottom-4.jpg">
+			    		<img src="img/onefloor-bottom-3.jpg">
+			    		<img src="img/onefloor-bottom-2.png">
+			    		<img src="img/onefloor-bottom-1.jpg">
+			    	</div>
+			    </div>
+			     <!--4F-->
+			      <div class="section6">
+			    	<div class="section6info">
+			    		<div class="xbnav">
+			    		   <div class="xb">4F服装鞋包</div>
+			    		   <div class="xbinfo">
+			    		   <ul class="dp"><li class="active">大牌</li>
+			    		   	   <li>男装</li>
+			    		   	   <li>女装</li>
+			    		   	   <li>鞋靴</li>
+			    		   	   <li>箱包</li>
+			    		   	   <li>内衣配饰</li>
+			    		   	   <li>珠宝首饰</li>
+			    		   	   <li>奢侈礼品</li>
+			    		   	   <li>奢华腕表</li>
+			    		   </ul>
+			    		   </div>
+			    		</div>
+			    		<div class="tab0">
+			    		<div class="tab1">
+			    			<table cellpadding="0" cellspacing="0">
+			    				<tr>
+			    					<td rowspan="3"><img class="flash1" src="img/img-flash-1.jpg"></td>
+			    					<td><img class="flash2" src="img/table-1.jpg"></td>
+			    					<td><img  class="flash5" src="img/table-2.jpg"></td>
+			    					<td><img  class="flash5" src="img/table-3.jpg"></td>
+			    				</tr>
+			    				<tr>
+			    					<td rowspan="2"><img class="flash3" src="img/LTloopshow-1.jpg"></td>
+			    					<td><img class="flash5" src="img/table-4.jpg"></td>
+			    					<td><img  class="flash5" src="img/table-5.jpg"></td>
+			    				</tr>
+			    				<tr>
+			    					<td><img  class="flash5" src="img/table-6.jpg"></td>
+			    					<td rowspan="2"><img class="flash5" src="img/table-7.jpg"></td>
+			    				</tr>
+			    				<tr>
+			    					<td><img  class="flash4" src="img/flash-bottom.jpg"></td>
+			    					<td><img   class="flash2" class="flash2" src="img/table-8.jpg"></td>
+			    					<td><img  class="flash5" src="img/table-9.jpg"></td>
+			    				</tr>
+			    			</table>
+			    		</div>
+			    	  
+			    	    <div class="tab2">2222222222222222</div>
+			    	    <div class="tab3">3333333333333333</div>
+			    	    <div class="tab4">4444444444444444</div>
+			    	    <div class="tab5">5555555555555555</div>
+			    	    <div class="tab6">6666666666666666</div>
+			    	    <div class="tab7">7777777777777777</div>
+			    	    <div class="tab8">8888888888888888</div>
+			    	    <div class="tab9">9999999999999999</div></div>
+			    	</div>
+			    	<div class="section6footer">
+			    		<img src="img/onefloor-bottom-10.jpg">
+			    		<img src="img/onefloor-bottom-9.jpg">
+			    		<img src="img/onefloor-bottom-8.jpg">
+			    		<img src="img/onefloor-bottom-7.jpg">
+			    		<img src="img/onefloor-bottom-6.jpg">
+			    		<img src="img/onefloor-bottom-5.jpg">
+			    		<img src="img/onefloor-bottom-4.jpg">
+			    		<img src="img/onefloor-bottom-3.jpg">
+			    		<img src="img/onefloor-bottom-2.png">
+			    		<img src="img/onefloor-bottom-1.jpg">
+			    	</div>
+			    </div>
+			     <!--5F-->
+			      <div class="section6">
+			    	<div class="section6info">
+			    		<div class="xbnav">
+			    		   <div class="xb">5F服装鞋包</div>
+			    		   <div class="xbinfo">
+			    		   <ul class="dp"><li class="active">大牌</li>
+			    		   	   <li>男装</li>
+			    		   	   <li>女装</li>
+			    		   	   <li>鞋靴</li>
+			    		   	   <li>箱包</li>
+			    		   	   <li>内衣配饰</li>
+			    		   	   <li>珠宝首饰</li>
+			    		   	   <li>奢侈礼品</li>
+			    		   	   <li>奢华腕表</li>
+			    		   </ul>
+			    		   </div>
+			    		</div>
+			    		<div class="tab0">
+			    		<div class="tab1">
+			    			<table cellpadding="0" cellspacing="0">
+			    				<tr>
+			    					<td rowspan="3"><img class="flash1" src="img/img-flash-1.jpg"></td>
+			    					<td><img class="flash2" src="img/table-1.jpg"></td>
+			    					<td><img  class="flash5" src="img/table-2.jpg"></td>
+			    					<td><img  class="flash5" src="img/table-3.jpg"></td>
+			    				</tr>
+			    				<tr>
+			    					<td rowspan="2"><img class="flash3" src="img/LTloopshow-1.jpg"></td>
+			    					<td><img class="flash5" src="img/table-4.jpg"></td>
+			    					<td><img  class="flash5" src="img/table-5.jpg"></td>
+			    				</tr>
+			    				<tr>
+			    					<td><img  class="flash5" src="img/table-6.jpg"></td>
+			    					<td rowspan="2"><img class="flash5" src="img/table-7.jpg"></td>
+			    				</tr>
+			    				<tr>
+			    					<td><img  class="flash4" src="img/flash-bottom.jpg"></td>
+			    					<td><img   class="flash2" class="flash2" src="img/table-8.jpg"></td>
+			    					<td><img  class="flash5" src="img/table-9.jpg"></td>
+			    				</tr>
+			    			</table>
+			    		</div>
+			    	  
+			    	    <div class="tab2">2222222222222222</div>
+			    	    <div class="tab3">3333333333333333</div>
+			    	    <div class="tab4">4444444444444444</div>
+			    	    <div class="tab5">5555555555555555</div>
+			    	    <div class="tab6">6666666666666666</div>
+			    	    <div class="tab7">7777777777777777</div>
+			    	    <div class="tab8">8888888888888888</div>
+			    	    <div class="tab9">9999999999999999</div></div>
+			    	</div>
+			    	<div class="section6footer">
+			    		<img src="img/onefloor-bottom-10.jpg">
+			    		<img src="img/onefloor-bottom-9.jpg">
+			    		<img src="img/onefloor-bottom-8.jpg">
+			    		<img src="img/onefloor-bottom-7.jpg">
+			    		<img src="img/onefloor-bottom-6.jpg">
+			    		<img src="img/onefloor-bottom-5.jpg">
+			    		<img src="img/onefloor-bottom-4.jpg">
+			    		<img src="img/onefloor-bottom-3.jpg">
+			    		<img src="img/onefloor-bottom-2.png">
+			    		<img src="img/onefloor-bottom-1.jpg">
+			    	</div>
+			    </div>
+			     <!--6F-->
+			      <div class="section6">
+			    	<div class="section6info">
+			    		<div class="xbnav">
+			    		   <div class="xb">6F服装鞋包</div>
+			    		   <div class="xbinfo">
+			    		   <ul class="dp"><li class="active">大牌</li>
+			    		   	   <li>男装</li>
+			    		   	   <li>女装</li>
+			    		   	   <li>鞋靴</li>
+			    		   	   <li>箱包</li>
+			    		   	   <li>内衣配饰</li>
+			    		   	   <li>珠宝首饰</li>
+			    		   	   <li>奢侈礼品</li>
+			    		   	   <li>奢华腕表</li>
+			    		   </ul>
+			    		   </div>
+			    		</div>
+			    		<div class="tab0">
+			    		<div class="tab1">
+			    			<table cellpadding="0" cellspacing="0">
+			    				<tr>
+			    					<td rowspan="3"><img class="flash1" src="img/img-flash-1.jpg"></td>
+			    					<td><img class="flash2" src="img/table-1.jpg"></td>
+			    					<td><img  class="flash5" src="img/table-2.jpg"></td>
+			    					<td><img  class="flash5" src="img/table-3.jpg"></td>
+			    				</tr>
+			    				<tr>
+			    					<td rowspan="2"><img class="flash3" src="img/LTloopshow-1.jpg"></td>
+			    					<td><img class="flash5" src="img/table-4.jpg"></td>
+			    					<td><img  class="flash5" src="img/table-5.jpg"></td>
+			    				</tr>
+			    				<tr>
+			    					<td><img  class="flash5" src="img/table-6.jpg"></td>
+			    					<td rowspan="2"><img class="flash5" src="img/table-7.jpg"></td>
+			    				</tr>
+			    				<tr>
+			    					<td><img  class="flash4" src="img/flash-bottom.jpg"></td>
+			    					<td><img   class="flash2" class="flash2" src="img/table-8.jpg"></td>
+			    					<td><img  class="flash5" src="img/table-9.jpg"></td>
+			    				</tr>
+			    			</table>
+			    		</div>
+			    	  
+			    	    <div class="tab2">2222222222222222</div>
+			    	    <div class="tab3">3333333333333333</div>
+			    	    <div class="tab4">4444444444444444</div>
+			    	    <div class="tab5">5555555555555555</div>
+			    	    <div class="tab6">6666666666666666</div>
+			    	    <div class="tab7">7777777777777777</div>
+			    	    <div class="tab8">8888888888888888</div>
+			    	    <div class="tab9">9999999999999999</div></div>
+			    	</div>
+			    	<div class="section6footer">
+			    		<img src="img/onefloor-bottom-10.jpg">
+			    		<img src="img/onefloor-bottom-9.jpg">
+			    		<img src="img/onefloor-bottom-8.jpg">
+			    		<img src="img/onefloor-bottom-7.jpg">
+			    		<img src="img/onefloor-bottom-6.jpg">
+			    		<img src="img/onefloor-bottom-5.jpg">
+			    		<img src="img/onefloor-bottom-4.jpg">
+			    		<img src="img/onefloor-bottom-3.jpg">
+			    		<img src="img/onefloor-bottom-2.png">
+			    		<img src="img/onefloor-bottom-1.jpg">
+			    	</div>
+			    </div>
+			     <!--7F-->
+			      <div class="section6">
+			    	<div class="section6info">
+			    		<div class="xbnav">
+			    		   <div class="xb">7F服装鞋包</div>
+			    		   <div class="xbinfo">
+			    		   <ul class="dp"><li class="active">大牌</li>
+			    		   	   <li>男装</li>
+			    		   	   <li>女装</li>
+			    		   	   <li>鞋靴</li>
+			    		   	   <li>箱包</li>
+			    		   	   <li>内衣配饰</li>
+			    		   	   <li>珠宝首饰</li>
+			    		   	   <li>奢侈礼品</li>
+			    		   	   <li>奢华腕表</li>
+			    		   </ul>
+			    		   </div>
+			    		</div>
+			    		<div class="tab0">
+			    		<div class="tab1">
+			    			<table cellpadding="0" cellspacing="0">
+			    				<tr>
+			    					<td rowspan="3"><img class="flash1" src="img/img-flash-1.jpg"></td>
+			    					<td><img class="flash2" src="img/table-1.jpg"></td>
+			    					<td><img  class="flash5" src="img/table-2.jpg"></td>
+			    					<td><img  class="flash5" src="img/table-3.jpg"></td>
+			    				</tr>
+			    				<tr>
+			    					<td rowspan="2"><img class="flash3" src="img/LTloopshow-1.jpg"></td>
+			    					<td><img class="flash5" src="img/table-4.jpg"></td>
+			    					<td><img  class="flash5" src="img/table-5.jpg"></td>
+			    				</tr>
+			    				<tr>
+			    					<td><img  class="flash5" src="img/table-6.jpg"></td>
+			    					<td rowspan="2"><img class="flash5" src="img/table-7.jpg"></td>
+			    				</tr>
+			    				<tr>
+			    					<td><img  class="flash4" src="img/flash-bottom.jpg"></td>
+			    					<td><img   class="flash2" class="flash2" src="img/table-8.jpg"></td>
+			    					<td><img  class="flash5" src="img/table-9.jpg"></td>
+			    				</tr>
+			    			</table>
+			    		</div>
+			    	  
+			    	    <div class="tab2">2222222222222222</div>
+			    	    <div class="tab3">3333333333333333</div>
+			    	    <div class="tab4">4444444444444444</div>
+			    	    <div class="tab5">5555555555555555</div>
+			    	    <div class="tab6">6666666666666666</div>
+			    	    <div class="tab7">7777777777777777</div>
+			    	    <div class="tab8">8888888888888888</div>
+			    	    <div class="tab9">9999999999999999</div></div>
+			    	</div>
+			    	<div class="section6footer">
+			    		<img src="img/onefloor-bottom-10.jpg">
+			    		<img src="img/onefloor-bottom-9.jpg">
+			    		<img src="img/onefloor-bottom-8.jpg">
+			    		<img src="img/onefloor-bottom-7.jpg">
+			    		<img src="img/onefloor-bottom-6.jpg">
+			    		<img src="img/onefloor-bottom-5.jpg">
+			    		<img src="img/onefloor-bottom-4.jpg">
+			    		<img src="img/onefloor-bottom-3.jpg">
+			    		<img src="img/onefloor-bottom-2.png">
+			    		<img src="img/onefloor-bottom-1.jpg">
+			    	</div>
+			    </div>
+			     <!--8F-->
+			      <div class="section6">
+			    	<div class="section6info">
+			    		<div class="xbnav">
+			    		   <div class="xb">8F服装鞋包</div>
+			    		   <div class="xbinfo">
+			    		   <ul class="dp"><li class="active">大牌</li>
+			    		   	   <li>男装</li>
+			    		   	   <li>女装</li>
+			    		   	   <li>鞋靴</li>
+			    		   	   <li>箱包</li>
+			    		   	   <li>内衣配饰</li>
+			    		   	   <li>珠宝首饰</li>
+			    		   	   <li>奢侈礼品</li>
+			    		   	   <li>奢华腕表</li>
+			    		   </ul>
+			    		   </div>
+			    		</div>
+			    		<div class="tab0">
+			    		<div class="tab1">
+			    			<table cellpadding="0" cellspacing="0">
+			    				<tr>
+			    					<td rowspan="3"><img class="flash1" src="img/img-flash-1.jpg"></td>
+			    					<td><img class="flash2" src="img/table-1.jpg"></td>
+			    					<td><img  class="flash5" src="img/table-2.jpg"></td>
+			    					<td><img  class="flash5" src="img/table-3.jpg"></td>
+			    				</tr>
+			    				<tr>
+			    					<td rowspan="2"><img class="flash3" src="img/LTloopshow-1.jpg"></td>
+			    					<td><img class="flash5" src="img/table-4.jpg"></td>
+			    					<td><img  class="flash5" src="img/table-5.jpg"></td>
+			    				</tr>
+			    				<tr>
+			    					<td><img  class="flash5" src="img/table-6.jpg"></td>
+			    					<td rowspan="2"><img class="flash5" src="img/table-7.jpg"></td>
+			    				</tr>
+			    				<tr>
+			    					<td><img  class="flash4" src="img/flash-bottom.jpg"></td>
+			    					<td><img   class="flash2" class="flash2" src="img/table-8.jpg"></td>
+			    					<td><img  class="flash5" src="img/table-9.jpg"></td>
+			    				</tr>
+			    			</table>
+			    		</div>
+			    	  
+			    	    <div class="tab2">2222222222222222</div>
+			    	    <div class="tab3">3333333333333333</div>
+			    	    <div class="tab4">4444444444444444</div>
+			    	    <div class="tab5">5555555555555555</div>
+			    	    <div class="tab6">6666666666666666</div>
+			    	    <div class="tab7">7777777777777777</div>
+			    	    <div class="tab8">8888888888888888</div>
+			    	    <div class="tab9">9999999999999999</div></div>
+			    	</div>
+			    	<div class="section6footer">
+			    		<img src="img/onefloor-bottom-10.jpg">
+			    		<img src="img/onefloor-bottom-9.jpg">
+			    		<img src="img/onefloor-bottom-8.jpg">
+			    		<img src="img/onefloor-bottom-7.jpg">
+			    		<img src="img/onefloor-bottom-6.jpg">
+			    		<img src="img/onefloor-bottom-5.jpg">
+			    		<img src="img/onefloor-bottom-4.jpg">
+			    		<img src="img/onefloor-bottom-3.jpg">
+			    		<img src="img/onefloor-bottom-2.png">
+			    		<img src="img/onefloor-bottom-1.jpg">
+			    	</div>
+			    </div>
+			    <!-- 9F-->
+			      <div class="section6">
+			    	<div class="section6info">
+			    		<div class="xbnav">
+			    		   <div class="xb">9F服装鞋包</div>
+			    		   <div class="xbinfo">
+			    		   <ul class="dp"><li class="active">大牌</li>
+			    		   	   <li>男装</li>
+			    		   	   <li>女装</li>
+			    		   	   <li>鞋靴</li>
+			    		   	   <li>箱包</li>
+			    		   	   <li>内衣配饰</li>
+			    		   	   <li>珠宝首饰</li>
+			    		   	   <li>奢侈礼品</li>
+			    		   	   <li>奢华腕表</li>
+			    		   </ul>
+			    		   </div>
+			    		</div>
+			    		<div class="tab0">
+			    		<div class="tab1">
+			    			<table cellpadding="0" cellspacing="0">
+			    				<tr>
+			    					<td rowspan="3"><img class="flash1" src="img/img-flash-1.jpg"></td>
+			    					<td><img class="flash2" src="img/table-1.jpg"></td>
+			    					<td><img  class="flash5" src="img/table-2.jpg"></td>
+			    					<td><img  class="flash5" src="img/table-3.jpg"></td>
+			    				</tr>
+			    				<tr>
+			    					<td rowspan="2"><img class="flash3" src="img/LTloopshow-1.jpg"></td>
+			    					<td><img class="flash5" src="img/table-4.jpg"></td>
+			    					<td><img  class="flash5" src="img/table-5.jpg"></td>
+			    				</tr>
+			    				<tr>
+			    					<td><img  class="flash5" src="img/table-6.jpg"></td>
+			    					<td rowspan="2"><img class="flash5" src="img/table-7.jpg"></td>
+			    				</tr>
+			    				<tr>
+			    					<td><img  class="flash4" src="img/flash-bottom.jpg"></td>
+			    					<td><img   class="flash2" class="flash2" src="img/table-8.jpg"></td>
+			    					<td><img  class="flash5" src="img/table-9.jpg"></td>
+			    				</tr>
+			    			</table>
+			    		</div>
+			    	  
+			    	    <div class="tab2">2222222222222222</div>
+			    	    <div class="tab3">3333333333333333</div>
+			    	    <div class="tab4">4444444444444444</div>
+			    	    <div class="tab5">5555555555555555</div>
+			    	    <div class="tab6">6666666666666666</div>
+			    	    <div class="tab7">7777777777777777</div>
+			    	    <div class="tab8">8888888888888888</div>
+			    	    <div class="tab9">9999999999999999</div></div>
+			    	</div>
+			    	<div class="section6footer">
+			    		<img src="img/onefloor-bottom-10.jpg">
+			    		<img src="img/onefloor-bottom-9.jpg">
+			    		<img src="img/onefloor-bottom-8.jpg">
+			    		<img src="img/onefloor-bottom-7.jpg">
+			    		<img src="img/onefloor-bottom-6.jpg">
+			    		<img src="img/onefloor-bottom-5.jpg">
+			    		<img src="img/onefloor-bottom-4.jpg">
+			    		<img src="img/onefloor-bottom-3.jpg">
+			    		<img src="img/onefloor-bottom-2.png">
+			    		<img src="img/onefloor-bottom-1.jpg">
+			    	</div>
+			    </div>
+			    <!--10F-->
+			      <div class="section6">
+			    	<div class="section6info">
+			    		<div class="xbnav">
+			    		   <div class="xb">10F服装鞋包</div>
+			    		   <div class="xbinfo">
+			    		   <ul class="dp"><li class="active">大牌</li>
+			    		   	   <li>男装</li>
+			    		   	   <li>女装</li>
+			    		   	   <li>鞋靴</li>
+			    		   	   <li>箱包</li>
+			    		   	   <li>内衣配饰</li>
+			    		   	   <li>珠宝首饰</li>
+			    		   	   <li>奢侈礼品</li>
+			    		   	   <li>奢华腕表</li>
+			    		   </ul>
+			    		   </div>
+			    		</div>
+			    		<div class="tab0">
+			    		<div class="tab1">
+			    			<table cellpadding="0" cellspacing="0">
+			    				<tr>
+			    					<td rowspan="3"><img class="flash1" src="img/img-flash-1.jpg"></td>
+			    					<td><img class="flash2" src="img/table-1.jpg"></td>
+			    					<td><img  class="flash5" src="img/table-2.jpg"></td>
+			    					<td><img  class="flash5" src="img/table-3.jpg"></td>
+			    				</tr>
+			    				<tr>
+			    					<td rowspan="2"><img class="flash3" src="img/LTloopshow-1.jpg"></td>
+			    					<td><img class="flash5" src="img/table-4.jpg"></td>
+			    					<td><img  class="flash5" src="img/table-5.jpg"></td>
+			    				</tr>
+			    				<tr>
+			    					<td><img  class="flash5" src="img/table-6.jpg"></td>
+			    					<td rowspan="2"><img class="flash5" src="img/table-7.jpg"></td>
+			    				</tr>
+			    				<tr>
+			    					<td><img  class="flash4" src="img/flash-bottom.jpg"></td>
+			    					<td><img   class="flash2" class="flash2" src="img/table-8.jpg"></td>
+			    					<td><img  class="flash5" src="img/table-9.jpg"></td>
+			    				</tr>
+			    			</table>
+			    		</div>
+			    	  
+			    	    <div class="tab2">2222222222222222</div>
+			    	    <div class="tab3">3333333333333333</div>
+			    	    <div class="tab4">4444444444444444</div>
+			    	    <div class="tab5">5555555555555555</div>
+			    	    <div class="tab6">6666666666666666</div>
+			    	    <div class="tab7">7777777777777777</div>
+			    	    <div class="tab8">8888888888888888</div>
+			    	    <div class="tab9">9999999999999999</div></div>
+			    	</div>
+			    	<div class="section6footer">
+			    		<img src="img/onefloor-bottom-10.jpg">
+			    		<img src="img/onefloor-bottom-9.jpg">
+			    		<img src="img/onefloor-bottom-8.jpg">
+			    		<img src="img/onefloor-bottom-7.jpg">
+			    		<img src="img/onefloor-bottom-6.jpg">
+			    		<img src="img/onefloor-bottom-5.jpg">
+			    		<img src="img/onefloor-bottom-4.jpg">
+			    		<img src="img/onefloor-bottom-3.jpg">
+			    		<img src="img/onefloor-bottom-2.png">
+			    		<img src="img/onefloor-bottom-1.jpg">
+			    	</div>
+			    </div>
+			     <!--11F-->
+			     <div class="section7">
+			    	<div class="section6info">
+			    		<div class="xbnav">
+			    		   <div class="xb">11F服装鞋包</div>
+			    		   <div class="xb1">热门晒单
+			    		   </div>
+			    		</div>
+			    		<div class="tab0">
+			    			<table cellpadding="0" cellspacing="0">
+			    				<tr>
+			    					<td rowspan="2" class="fa1"><img class="f" src="img/dijia-1.png">
+			    					 <div class="pr1">
+			    					 	<P>你好你好你好你好你好你好你好你好你好你好</P>
+			    					 	<span class="price">¥9.9</span>
+			    					 </div>
+			    					</td>
+			    					<td class="fa"><img class="f" src="img/dijia-2.jpg">
+			    					   <div class="pr">
+			    					 	<P>你好你好你好你好你好你好你好你好你好你好</P>
+			    					 	<span class="price">¥9.9</span>
+			    					   </div>
+			    					</td>
+			    					<td class="fa"><img  class="f" src="img/dijia-3.png">
+			    					    <div class="pr">
+			    					 	<P>你好你好你好你好你好你好你好你好你好你好</P>
+			    					 	<span class="price">¥9.9</span>
+			    					    </div>
+			    					</td>
+			    					<td class="fa"><img  class="f" src="img/dijia-4.jpg">
+			    					   <div class="pr">
+			    					 	<P>你好你好你好你好你好你好你好你好你好你好</P>
+			    					 	<span class="price">¥9.9</span>
+			    					 </div>
+			    					</td>
+			    					<td class="fa2" rowspan="2">
+			    						<div class="p1">
+			    						<img  class="f" src="img/slide-5.jpg">
+			    					    <img  class="f" src="img/slide-6.jpg">
+			    						</div>
+			    						<div class="pr2">
+			    					 	<P>你好你好你好你好你好你好你好你好你好你好</P>
+			    					 	<span class="price">¥9.9</span>
+			    					     </div>
+			    					    <div class="pr3">
+			    					 	<P>你好你好你好你好你好你好你好你好你好你好</P>
+			    					 	<span class="price">¥9.9</span>
+			    					    </div>
+			    					</td>
+			    				</tr>
+			    				<tr>
+			    					<td class="fa"><img class="f" src="img/dijia-5.png">
+			    					    <div class="pr">
+			    					 	<P>你好你好你好你好你好你好你好你好你好你好</P>
+			    					 	<span class="price">¥9.9</span>
+			    					     </div>
+			    					</td>
+			    					<td class="fa"><img class="f" src="img/dijia-6.png">
+			    					     <div class="pr">
+			    					 	<P>你好你好你好你好你好你好你好你好你好你好</P>
+			    					 	<span class="price">¥9.9</span>
+			    					     </div>
+			    					</td>
+			    					<td class="fa"><img  class="f" src="img/dijia-7.png">
+			    					    <div class="pr">
+			    					 	<P>你好你好你好你好你好你好你好你好你好你好</P>
+			    					 	<span class="price">¥9.9</span>
+			    					 </div>
+			    					</td>
+			    				</tr>
+			    			</table>
+			    		</div>
+			    	</div>
+			    </div>
+                 <div class="section8">prefect!</div>
+              </div>
+			</section><!--中部主体-->
+			<div class="cb">
+				<div class="right1"><img src="img/1.PNG"></div>
+				<div class="right2"><img src="img/2.PNG"></div>
+				<div class="right3"><img src="img/3.PNG"></div>
+				<div class="right4"><img src="img/4.PNG"></div>
+				<div class="right5"><img src="img/5.PNG"></div>
+				<div class="right6"><img src="img/6.PNG"></div>
+				<div class="right7"><img src="img/7.PNG"></div>
+				<div class="right8"><img src="img/8.PNG"></div>
+				<div class="right9"><img src="img/9.PNG"></div>
+			</div>
+			<div class="cb2">
+				<div class="f1">F1</div>
+				<div class="f2">F2</div>
+				<div class="f3">F3</div>
+				<div class="f4">F4</div>
+				<div class="f5">F5</div>
+				<div class="f6">F6</div>
+				<div class="f7">F7</div>
+				<div class="f8">F8</div>
+				<div class="f9">F9</div>
+				<div class="f10">F10</div>
+				<div class="f11">F11</div>
+			</div>
+			<footer></footer><!--底部-->
+		</div><!--总体-->
+	</body>
+	<script>
+		$(function(){
+			$.ajax({
+				url:"index.json",
+				type:"get",
+				dataType:"json",
+				success:callback,
+				error:function(){
+					alert("失败");
+				}
+			});
+			function callback(data){
+				//alert("成功");
+//				$("#nav>li").each(function(i,o){
+//					$(o).text(data[i].title);
+//				});
+					for(var i=0;i<data.length;i++){
+						var cur=data[i];
+						$("#list0").append(
+						'<li class="list1" id="a'+i+'">'+cur.na+'<span>'+cur.ro+'</span></li>'
+						)
+					}
+					  $("#a0").mouseover(function(){
+    	                $("#lis0").show();
+                      }); 
+                     $("#lis0").mouseover(function(){
+    	                $("#lis0").show();
+                      });
+                      $("#a0").mouseout(function(){
+                      	 $("#lis0").hide();
+                      }) 
+                     $("#lis0").mouseout(function(){
+    	                $("#lis0").hide();
+                     }); 
+                     $("#lis1").mouseover(function(){
+    	                $("#lis1").show();
+                      }); 
+                      $("#a1").mouseover(function(){
+    	                $("#lis1").show();
+                      });
+                      $("#lis1").mouseout(function(){
+    	                $("#lis1").hide();
+                     });
+                     $("#lis2").mouseout(function(){
+    	                $("#lis2").hide();
+                     }); 
+                     $("#a1").mouseout(function(){
+    	                $("#lis1").hide();
+                     }); 
+                      $("#a2").mouseover(function(){
+    	                $("#lis2").show();
+                      });
+                      $("#lis2").mouseover(function(){
+    	                $("#lis2").show();
+                      }); 
+                      
+                     $("#a2").mouseout(function(){
+    	                $("#lis2").hide();
+                     }); 
+			}
+			 
+		});
+		
+	</script>
+</html>
+
